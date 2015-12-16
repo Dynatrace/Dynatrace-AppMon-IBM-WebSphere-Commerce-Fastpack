@@ -1,0 +1,718 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- ATTENTION - THIS IS AN AUTOMATICALLY GENERATED FILE -->
+<!-- Manual changes can cause severe problems and system instability -->
+<!-- Apply manual changes only if you have received explicit instructions from dynaTrace Support -->
+<dynatrace version="6.2.2.1019" date="12/16/15 9:59 AM">
+  <dashboardconfig memento.version="6.2.2.1019" suppresssavewarning="false" created="2015-12-16T09:59:09-0700" sessiontype="live" icon="com.dynatrace.diagnostics.sdk/default_16x16.png" description="This dashboard shows the booking workflow at its important stages." modifiedbyname="dmabxw0" locationascomparesource="false" source="server://dt2wscv8" sessionid="WebSphere Commerce" opendrilldowninnewdashboard="true" groupname="" autoreplacesession="false" revision="00000151-abbb-2f30-82d0-0e09aa973669" locationassource="false" localizationenabled="false" name="WSCommerce Sales Funnel" authorname="dmabxw0" modified="2015-12-16T09:59:10-0700" id="dca5448f-8dd7-4a03-a816-b87c7d6af29f">
+    <reportconfig print.images="true" formatpdf="com.dynatrace.diagnostics.report.velocity.format.pdfrenderer" orientation="portrait" description="" title="" type="PDF" enabled="true" formathtml="com.dynatrace.diagnostics.report.velocity.format.htmlrenderer" lines.per.table="100" pagesize="A4" override="false" optimizeequalcolumns="true" print.legends="true" levels.per.tree="10" />
+    <filter>
+      <criterion type="admfilteranalyzer" />
+      <criterion mode="all" type="agents" completepurepath="true">
+        <textpattern name="agentname" type="contains" enabled="true" />
+        <textpattern name="agenthost" type="contains" enabled="true" />
+      </criterion>
+      <criterion type="and" />
+      <criterion mode="all" excludeexternalsubpaths="false" type="api" />
+      <criterion mode="all" type="applications">
+        <applicationmetadata name="easyTravel portal" isdefault="false" />
+      </criterion>
+      <criterion showrendering="true" isactive="true" shownetwork="true" type="browserpathtype" showjavascript="true" />
+      <criterion pageenabled="false" timerenabled="false" type="browsersectionfilter">
+        <timername>
+          <stringmatchpattern match="contains" text="" />
+        </timername>
+        <pageurl>
+          <stringmatchpattern match="contains" text="" />
+        </pageurl>
+      </criterion>
+      <criterion type="btm" />
+      <criterion type="casuemdimension" />
+      <criterion intervalend="0" intervalstart="0" type="dcrumdimension" filterinterval="false" />
+      <criterion analyzeserverpath="true" analyzeclienterrors="false" isactive="true" analyzeenduserpath="true" type="enduserpath" />
+      <criterion mode="all" type="hosts" completepurepath="true" />
+      <criterion severitiesmode="all" statesmode="all" type="incident" rulesmode="all" severities="" states="" />
+      <criterion type="or" />
+      <criterion mode="all" enduser="false" type="purepaths" />
+      <criterion contenttypegroupsmode="all" showrendering="true" javascripttriggersmode="all" isactive="false" shownetwork="true" requestcriterion="ALL" type="riapurepathtype" showjavascript="true" />
+      <criterion includemeasurename="true" includeplatform="true" includetestname="true" teststatus="FAILED,INVALIDATED,VOLATILE,DEGRADED,IMPROVED,passed" type="tests" testcategory="UNIT,BROWSER_TIMER,BROWSER_AUTO_TIMER,PERFORMANCE,LOAD,WEB_API" />
+      <criterion includeplatform="true" type="testsoverview" />
+      <criterion type="threads" enabled="false" filterbyid="false" />
+      <criterion type="timeframe">
+        <timeframe type="Last 6h" />
+      </criterion>
+      <criterion type="visits">
+        <visitidset />
+      </criterion>
+      <criterion type="webpage">
+        <textpattern name="timerName" type="contains" enabled="true" />
+        <textpattern name="pageContext" type="contains" enabled="true" />
+      </criterion>
+      <criterion type="webrequest">
+        <filteruripattern>
+          <stringmatchpattern match="contains" text="" />
+        </filteruripattern>
+        <filterquerypattern>
+          <stringmatchpattern match="contains" text="" />
+        </filterquerypattern>
+      </criterion>
+    </filter>
+    <autorefreshconfig unit="MINUTES" time="15" enabled="true" />
+    <designconfig namefontsize="10" descriptionshow="true" headertype="DEFAULT" nameshow="true" descriptionfontstyle="NORMAL" namealignment="CENTER" namefontstyle="BOLD" descriptionfontsize="8" clienttheme="DEFAULT" descriptionfontcolor="128,128,128" descriptionalignment="CENTER" autoadjustfontsizes="false" />
+    <dashboardlayout>
+      <portletfolder selectionindex="-1" relationtype="LEFT" portletconfigorder="" isplaceholder="true" folderid="org.eclipse.ui.internal.ViewStack@8842b2" relatedfolderid="DashboardLayout.blankArea" ratio="0.95" />
+      <portletfolder selectionindex="-1" relationtype="RIGHT" portletconfigorder="" isplaceholder="true" folderid="org.eclipse.ui.internal.ViewStack@19c1b71" relatedfolderid="org.eclipse.ui.internal.ViewStack@8842b2" ratio="0.24835165" />
+      <portletfolder selectionindex="-1" relationtype="RIGHT" portletconfigorder="" isplaceholder="true" folderid="org.eclipse.ui.internal.ViewStack@65cd2" relatedfolderid="org.eclipse.ui.internal.ViewStack@19c1b71" ratio="0.5368132" />
+      <portletfolder selectionindex="-1" relationtype="BOTTOM" portletconfigorder="" isplaceholder="true" folderid="3ece33fa-2d2c-4fd3-bed1-0c7c38fd9eb1" relatedfolderid="org.eclipse.ui.internal.ViewStack@65cd2" ratio="0.7497062" />
+      <portletfolder selectionindex="-1" relationtype="RIGHT" portletconfigorder="" isplaceholder="true" folderid="7f0a24c3-ad31-4a92-bffe-bd12bccf77e5" relatedfolderid="3ece33fa-2d2c-4fd3-bed1-0c7c38fd9eb1" ratio="0.49835163" />
+      <portletfolder selectionindex="-1" relationtype="RIGHT" portletconfigorder="" isplaceholder="true" folderid="org.eclipse.ui.internal.ViewStack@fc7905" relatedfolderid="7f0a24c3-ad31-4a92-bffe-bd12bccf77e5" ratio="0.49835163" />
+      <portletfolder selectionindex="-1" relationtype="BOTTOM" portletconfigorder="" isplaceholder="true" folderid="org.eclipse.ui.internal.ViewStack@14c754d" relatedfolderid="org.eclipse.ui.internal.ViewStack@65cd2" ratio="0.6498237" />
+      <portletfolder selectionindex="-1" relationtype="RIGHT" portletconfigorder="" isplaceholder="true" folderid="org.eclipse.ui.internal.ViewStack@13152ab" relatedfolderid="org.eclipse.ui.internal.ViewStack@65cd2" ratio="0.49835163" />
+      <portletfolder selectionindex="-1" relationtype="RIGHT" portletconfigorder="" isplaceholder="true" folderid="org.eclipse.ui.internal.ViewStack@5fea9b" relatedfolderid="org.eclipse.ui.internal.ViewStack@13152ab" ratio="0.49505493" />
+      <portletfolder selectionindex="-1" relationtype="RIGHT" portletconfigorder="" isplaceholder="true" folderid="org.eclipse.ui.internal.ViewStack@ffa8da" relatedfolderid="org.eclipse.ui.internal.ViewStack@19c1b71" ratio="0.31593406" />
+      <portletfolder selectionindex="0" relationtype="RIGHT" portletconfigorder="77c63c27-f69f-47ab-b627-3a37c875ac29" folderid="org.eclipse.ui.internal.ViewStack@121465a" relatedfolderid="org.eclipse.ui.internal.ViewStack@ffa8da" ratio="0.26263738">
+        <designconfig namefontsize="18" descriptionshow="true" headertype="CUSTOM" nameshow="true" descriptionfontstyle="NORMAL" namealignment="CENTER" namefontstyle="BOLD" descriptionfontsize="8" inherited="false" descriptionfontcolor="128,128,128" descriptionalignment="CENTER" />
+      </portletfolder>
+      <portletfolder selectionindex="0" relationtype="BOTTOM" portletconfigorder="af1cd46b-9644-4aa0-915d-1d2b50c6ab60" folderid="org.eclipse.ui.internal.ViewStack@49869d" relatedfolderid="org.eclipse.ui.internal.ViewStack@121465a" ratio="0.40188015">
+        <designconfig namefontsize="14" descriptionshow="true" headertype="CUSTOM" nameshow="true" descriptionfontstyle="NORMAL" namealignment="CENTER" namefontstyle="BOLD" descriptionfontsize="8" inherited="false" descriptionfontcolor="128,128,128" descriptionalignment="CENTER" />
+      </portletfolder>
+      <portletfolder selectionindex="0" relationtype="BOTTOM" portletconfigorder="bcfbc440-70e3-467b-b257-07cecdd6e86b" folderid="org.eclipse.ui.internal.ViewStack@1a65f2c" relatedfolderid="org.eclipse.ui.internal.ViewStack@49869d" ratio="0.33988214">
+        <designconfig namefontsize="14" descriptionshow="true" headertype="CUSTOM" nameshow="true" descriptionfontstyle="NORMAL" namealignment="CENTER" namefontstyle="BOLD" descriptionfontsize="8" inherited="false" descriptionfontcolor="128,128,128" descriptionalignment="CENTER" />
+      </portletfolder>
+      <portletfolder selectionindex="0" relationtype="BOTTOM" portletconfigorder="fc07603c-4017-4161-8f58-1b6cccbdccf7" folderid="org.eclipse.ui.internal.ViewStack@1ec98f" relatedfolderid="org.eclipse.ui.internal.ViewStack@1a65f2c" ratio="0.48809522">
+        <designconfig namefontsize="14" descriptionshow="true" headertype="CUSTOM" nameshow="true" descriptionfontstyle="NORMAL" namealignment="CENTER" namefontstyle="BOLD" descriptionfontsize="8" inherited="false" descriptionfontcolor="128,128,128" descriptionalignment="CENTER" />
+      </portletfolder>
+      <portletfolder selectionindex="0" relationtype="BOTTOM" portletconfigorder="374b0970-43fb-4919-83a9-e3819ef4a949" folderid="org.eclipse.ui.internal.ViewStack@1d7ee3c" relatedfolderid="org.eclipse.ui.internal.ViewStack@121465a" ratio="0.57309943">
+        <designconfig namefontsize="14" descriptionshow="true" headertype="CUSTOM" nameshow="true" descriptionfontstyle="NORMAL" namealignment="CENTER" namefontstyle="BOLD" descriptionfontsize="8" inherited="false" descriptionfontcolor="128,128,128" descriptionalignment="CENTER" />
+      </portletfolder>
+      <portletfolder selectionindex="0" relationtype="BOTTOM" portletconfigorder="204eabbc-90f3-4f0f-8f8e-003ea73d2df9" folderid="org.eclipse.ui.internal.ViewStack@1cbd976" relatedfolderid="org.eclipse.ui.internal.ViewStack@121465a" ratio="0.54591835">
+        <designconfig namefontsize="14" descriptionshow="true" headertype="CUSTOM" nameshow="true" descriptionfontstyle="NORMAL" namealignment="CENTER" namefontstyle="BOLD" descriptionfontsize="8" inherited="false" descriptionfontcolor="128,128,128" descriptionalignment="CENTER" />
+      </portletfolder>
+      <portletfolder selectionindex="-1" relationtype="RIGHT" portletconfigorder="" isplaceholder="true" folderid="org.eclipse.ui.internal.ViewStack@190ccf7" relatedfolderid="org.eclipse.ui.internal.ViewStack@121465a" ratio="0.4989011" />
+      <portletfolder selectionindex="-1" relationtype="RIGHT" portletconfigorder="" isplaceholder="true" folderid="org.eclipse.ui.internal.ViewStack@352339" relatedfolderid="org.eclipse.ui.internal.ViewStack@190ccf7" ratio="0.49780703" />
+      <portletfolder selectionindex="-1" relationtype="RIGHT" portletconfigorder="" isplaceholder="true" folderid="org.eclipse.ui.internal.ViewStack@ad103e" relatedfolderid="org.eclipse.ui.internal.ViewStack@121465a" ratio="0.4967033" />
+      <portletfolder selectionindex="-1" relationtype="RIGHT" portletconfigorder="" isplaceholder="true" folderid="org.eclipse.ui.internal.ViewStack@222bf332" relatedfolderid="org.eclipse.ui.internal.ViewStack@121465a" ratio="0.4989011" />
+      <portletfolder selectionindex="-1" relationtype="RIGHT" portletconfigorder="" isplaceholder="true" folderid="org.eclipse.ui.internal.ViewStack@5036f693" relatedfolderid="org.eclipse.ui.internal.ViewStack@222bf332" ratio="0.4989035" />
+      <portletfolder selectionindex="-1" relationtype="RIGHT" portletconfigorder="" isplaceholder="true" folderid="org.eclipse.ui.internal.ViewStack@3e5d6f5e" relatedfolderid="org.eclipse.ui.internal.ViewStack@222bf332" ratio="0.49780703" />
+      <portletfolder selectionindex="-1" relationtype="RIGHT" portletconfigorder="" isplaceholder="true" folderid="org.eclipse.ui.internal.ViewStack@636eefae" relatedfolderid="org.eclipse.ui.internal.ViewStack@121465a" ratio="0.49835163" />
+      <portletfolder selectionindex="-1" relationtype="RIGHT" portletconfigorder="" isplaceholder="true" folderid="org.eclipse.ui.internal.ViewStack@342e8f9b" relatedfolderid="org.eclipse.ui.internal.ViewStack@121465a" ratio="0.4989011" />
+      <portletfolder selectionindex="0" relationtype="RIGHT" portletconfigorder="be5d985d-2fc5-4093-823c-85d402a69e01" folderid="org.eclipse.ui.internal.ViewStack@57717ab9" relatedfolderid="org.eclipse.ui.internal.ViewStack@121465a" ratio="0.50989014">
+        <designconfig namefontsize="18" descriptionshow="true" headertype="CUSTOM" nameshow="true" descriptionfontstyle="NORMAL" namealignment="CENTER" namefontstyle="BOLD" descriptionfontsize="8" inherited="false" descriptionfontcolor="128,128,128" descriptionalignment="CENTER" />
+      </portletfolder>
+      <portletfolder selectionindex="0" relationtype="RIGHT" portletconfigorder="bc113a0d-6c2b-4d13-b4be-3d5329b3c6cd" folderid="org.eclipse.ui.internal.ViewStack@bee5268" relatedfolderid="org.eclipse.ui.internal.ViewStack@57717ab9" ratio="0.6849776">
+        <designconfig namefontsize="18" descriptionshow="true" headertype="CUSTOM" nameshow="true" descriptionfontstyle="NORMAL" namealignment="CENTER" namefontstyle="BOLD" descriptionfontsize="8" inherited="false" descriptionfontcolor="128,128,128" descriptionalignment="CENTER" />
+      </portletfolder>
+      <portletfolder selectionindex="0" relationtype="RIGHT" portletconfigorder="5271a5dc-135e-4278-b8d6-36508e861a43" folderid="org.eclipse.ui.internal.ViewStack@6b426202" relatedfolderid="org.eclipse.ui.internal.ViewStack@57717ab9" ratio="0.49590835">
+        <designconfig namefontsize="18" descriptionshow="true" headertype="CUSTOM" nameshow="true" descriptionfontstyle="NORMAL" namealignment="CENTER" namefontstyle="BOLD" descriptionfontsize="8" inherited="false" descriptionfontcolor="128,128,128" descriptionalignment="CENTER" />
+      </portletfolder>
+      <portletfolder selectionindex="0" relationtype="RIGHT" portletconfigorder="d38a7951-43f3-4d9d-b87f-ba34881ba765" folderid="org.eclipse.ui.internal.ViewStack@6823fb15" relatedfolderid="org.eclipse.ui.internal.ViewStack@121465a" ratio="0.6778017">
+        <designconfig namefontsize="18" descriptionshow="true" headertype="CUSTOM" nameshow="true" descriptionfontstyle="NORMAL" namealignment="CENTER" namefontstyle="BOLD" descriptionfontsize="8" inherited="false" descriptionfontcolor="128,128,128" descriptionalignment="CENTER" />
+      </portletfolder>
+      <portletfolder selectionindex="0" relationtype="RIGHT" portletconfigorder="fac0d558-2d8d-4429-9bc5-d7f0f737549c" folderid="org.eclipse.ui.internal.ViewStack@66c5908d" relatedfolderid="org.eclipse.ui.internal.ViewStack@121465a" ratio="0.5055644">
+        <designconfig namefontsize="18" descriptionshow="true" headertype="CUSTOM" nameshow="true" descriptionfontstyle="NORMAL" namealignment="CENTER" namefontstyle="BOLD" descriptionfontsize="8" inherited="false" descriptionfontcolor="128,128,128" descriptionalignment="CENTER" />
+      </portletfolder>
+    </dashboardlayout>
+    <portletconfig showabsolutevalues="false" usedashboardsourceforcompare="true" usespecificautorefresh="false" sessiontype="live" lastvalue="false" icon="com.dynatrace.diagnostics.sdk/chart_cust.png" description="" locationascomparesource="false" source="server://dt2wscv8" sessionid="WebSphere Commerce" usedashboardsource="true" folderid="org.eclipse.ui.internal.ViewStack@49869d" locationassource="false" addfilterinfo="false" name="APDEX per Page Action" ismaster="false" typeid="com.dynatrace.diagnostics.portlets.chart.Chart" id="af1cd46b-9644-4aa0-915d-1d2b50c6ab60">
+      <reportconfig print.images="true" lines.per.table="100" override="false" optimizeequalcolumns="true" print.legends="true" reportposition="1" enabled="true" levels.per.tree="10" />
+      <filter>
+        <criterion mode="all" type="agents" completepurepath="true">
+          <textpattern name="agentname" type="contains" enabled="true" />
+          <textpattern name="agenthost" type="contains" enabled="true" />
+        </criterion>
+        <criterion mode="all" type="applications">
+          <applicationmetadata name="easyTravel portal" isdefault="false" />
+        </criterion>
+        <criterion type="btm" />
+        <criterion mode="all" type="hosts" completepurepath="true" />
+        <criterion type="timeframe">
+          <timeframe type="Last 6h" />
+        </criterion>
+        <criterion type="visits">
+          <visitidset />
+        </criterion>
+        <inheritancemap />
+      </filter>
+      <autorefreshconfig unit="MINUTES" time="5" enabled="false" />
+      <sashconfig displayoption="CHART" weights="500,500" />
+      <datamodelconfig>
+        <chart axis.x.title="" axis.y.title.show="true" showtooltips="true" bounds.y.enabled="false" showvalues="false" showtitle="false" logxaxis="false" title="" resolution="Auto" axis.x.show="true" showname="true" maxdisplayitems="10" zoomable="true" charttype="MeterChart" showheatfield="true" axis.y.show="true" isentitymarkable="false" orientation="Horizontal" yaxisalignment="0" legendposition="Bottom" axis.x.title.show="true" axis.y.title="" splitcharts="true" limititems="false" showlegend="false" lockyaxis="true" showlabels="true">
+          <legendcomposition>
+            <pielabelcomposition unit="true" value="true" />
+          </legendcomposition>
+          <chartsource systemid="WebSphere Commerce" sourcecolor="RGB(138,120,7,255)" dynamicconfig="false" fetchthreshold="false" scale="0" sessionid="WebSphere Commerce" groupingcriterion="BTSP1" colorinheritancemode="random" aggregationtype="Avg" rate="10s" sourcetype="MEASURE" id="81e18aa9-8aaa-43b7-b30e-1beb6f832257" ratesupported="true" displayrate="10s" visible="true" autounit="false" sessiontype="live" fetch.dynamic.measures="true" autoscale="false" measuretype="TransactionMeasure" fetchbaseline="false" unit="number" name="Apdex of Page Class Actions - Apdex of User Actions" groupingvalue="ProductDisplayCmdImpl" overridesource="true" fetchmeasurecolor="false" position="4" uiunit="number">
+            <tagtolabel>
+              <taglabelentry value="ClassName Page Class Performance" key="BTSP1" />
+            </tagtolabel>
+            <lightweightuniquemeasureidentifier systemid="WebSphere Commerce" application="" parentkeyid="Apdex of Page Class Actions (Apdex of Page Actions;Page Actions;Apdex)" agentname="" metricsimpledisplayname="Value" agenthost="" metrickeyid="Value" keyid="Apdex of Page Class Actions (Apdex of Page Actions;Page Actions;Apdex)" metricgroupkey="Business Transaction Results" collector="" measuretype="TransactionMeasure" />
+            <displaysourceinfo measureunit="number" agentname="" agenthost="" agentgroup="&lt;all-agents&gt;" transactionname="Apdex of Page Class Actions" measurerate="purepath" />
+          </chartsource>
+          <chartsource systemid="WebSphere Commerce" sourcecolor="RGB(138,120,7,255)" dynamicconfig="false" fetchthreshold="false" scale="0" sessionid="WebSphere Commerce" groupingcriterion="BTSP1" colorinheritancemode="random" aggregationtype="Avg" rate="10s" sourcetype="MEASURE" id="98152eea-3035-4c99-8f1d-4a2b8979e012" ratesupported="true" displayrate="10s" visible="true" autounit="false" sessiontype="live" fetch.dynamic.measures="true" autoscale="false" measuretype="TransactionMeasure" fetchbaseline="false" unit="number" name="Apdex of Page Class Actions - Apdex of User Actions" groupingvalue="OrderProcessCmdImpl" overridesource="true" fetchmeasurecolor="false" position="6" uiunit="number">
+            <tagtolabel>
+              <taglabelentry value="ClassName Page Class Performance" key="BTSP1" />
+            </tagtolabel>
+            <lightweightuniquemeasureidentifier systemid="WebSphere Commerce" application="" parentkeyid="Apdex of Page Class Actions (Apdex of Page Actions;Page Actions;Apdex)" agentname="" metricsimpledisplayname="Value" agenthost="" metrickeyid="Value" keyid="Apdex of Page Class Actions (Apdex of Page Actions;Page Actions;Apdex)" metricgroupkey="Business Transaction Results" collector="" measuretype="TransactionMeasure" />
+            <displaysourceinfo measureunit="number" agentname="" agenthost="" agentgroup="&lt;all-agents&gt;" transactionname="Apdex of Page Class Actions" measurerate="purepath" />
+          </chartsource>
+          <chartsource systemid="WebSphere Commerce" sourcecolor="RGB(138,120,7,255)" dynamicconfig="false" fetchthreshold="false" scale="0" sessionid="WebSphere Commerce" groupingcriterion="BTSP1" colorinheritancemode="random" aggregationtype="Avg" rate="10s" sourcetype="MEASURE" id="b0e631eb-5e7a-4fc6-8f74-b53a41d61989" ratesupported="true" displayrate="10s" visible="true" autounit="false" sessiontype="live" fetch.dynamic.measures="true" autoscale="false" measuretype="TransactionMeasure" fetchbaseline="false" unit="number" name="Apdex of Page Class Actions - Apdex of User Actions" groupingvalue="LogonCmdImpl" overridesource="true" fetchmeasurecolor="false" position="1" uiunit="number">
+            <tagtolabel>
+              <taglabelentry value="ClassName Page Class Performance" key="BTSP1" />
+            </tagtolabel>
+            <lightweightuniquemeasureidentifier systemid="WebSphere Commerce" application="" parentkeyid="Apdex of Page Class Actions (Apdex of Page Actions;Page Actions;Apdex)" agentname="" metricsimpledisplayname="Value" agenthost="" metrickeyid="Value" keyid="Apdex of Page Class Actions (Apdex of Page Actions;Page Actions;Apdex)" metricgroupkey="Business Transaction Results" collector="" measuretype="TransactionMeasure" />
+            <displaysourceinfo measureunit="number" agentname="" agenthost="" agentgroup="&lt;all-agents&gt;" transactionname="Apdex of Page Class Actions" measurerate="purepath" />
+          </chartsource>
+          <chartsource systemid="WebSphere Commerce" sourcecolor="RGB(138,120,7,255)" dynamicconfig="true" fetchthreshold="false" scale="0" sessionid="WebSphere Commerce" parentid="73d9fe92-4791-466b-a338-a1cad5dd41c3" groupingcriterion="BTSP1" aggregationtype="Avg" rate="10s" sourcetype="MEASURE" id="c4209ca6-2961-3357-a190-66847197bd9b" ratesupported="true" displayrate="10s" visible="false" autounit="false" sessiontype="live" fetch.dynamic.measures="true" autoscale="false" measuretype="TransactionMeasure" fetchbaseline="false" unit="number" name="Apdex of Page Class Actions - Apdex of User Actions" groupingvalue="OrderPrepareCmdImpl" overridesource="true" fetchmeasurecolor="false" position="-1" uiunit="number">
+            <tagtolabel>
+              <taglabelentry value="ClassName Page Class Performance" key="BTSP1" />
+            </tagtolabel>
+            <lightweightuniquemeasureidentifier systemid="WebSphere Commerce" application="" parentkeyid="Apdex of Page Class Actions (Apdex of Page Actions;Page Actions;Apdex)" agentname="-" metricsimpledisplayname="Value" agenthost="-" metrickeyid="Value" keyid="Apdex of Page Class Actions (Apdex of Page Actions;Page Actions;Apdex)" metricgroupkey="Business Transaction Results" collector="" measuretype="TransactionMeasure">
+              <tag type="0" value="OrderPrepareCmdImpl" key="BTSP1" />
+            </lightweightuniquemeasureidentifier>
+            <displaysourceinfo measureunit="number" agentname="-" agenthost="-" agentgroup="&lt;all-agents&gt;" transactionname="Apdex of Page Class Actions" measurerate="purepath" />
+          </chartsource>
+          <chartsource systemid="WebSphere Commerce" sourcecolor="RGB(138,120,7,255)" dynamicconfig="true" fetchthreshold="false" scale="0" sessionid="WebSphere Commerce" parentid="98152eea-3035-4c99-8f1d-4a2b8979e012" groupingcriterion="BTSP1" aggregationtype="Avg" rate="10s" sourcetype="MEASURE" id="01175591-c7f0-3237-8f8d-d5b82d9304ad" ratesupported="true" displayrate="10s" visible="false" autounit="false" sessiontype="live" fetch.dynamic.measures="true" autoscale="false" measuretype="TransactionMeasure" fetchbaseline="false" unit="number" name="Apdex of Page Class Actions - Apdex of User Actions" groupingvalue="OrderProcessCmdImpl" overridesource="true" fetchmeasurecolor="false" position="-1" uiunit="number">
+            <tagtolabel>
+              <taglabelentry value="ClassName Page Class Performance" key="BTSP1" />
+            </tagtolabel>
+            <lightweightuniquemeasureidentifier systemid="WebSphere Commerce" application="" parentkeyid="Apdex of Page Class Actions (Apdex of Page Actions;Page Actions;Apdex)" agentname="-" metricsimpledisplayname="Value" agenthost="-" metrickeyid="Value" keyid="Apdex of Page Class Actions (Apdex of Page Actions;Page Actions;Apdex)" metricgroupkey="Business Transaction Results" collector="" measuretype="TransactionMeasure">
+              <tag type="0" value="OrderProcessCmdImpl" key="BTSP1" />
+            </lightweightuniquemeasureidentifier>
+            <displaysourceinfo measureunit="number" agentname="-" agenthost="-" agentgroup="&lt;all-agents&gt;" transactionname="Apdex of Page Class Actions" measurerate="purepath" />
+          </chartsource>
+          <chartsource systemid="WebSphere Commerce" sourcecolor="RGB(138,120,7,255)" dynamicconfig="true" fetchthreshold="false" scale="0" sessionid="WebSphere Commerce" parentid="5fa4ec21-9874-4aa4-bfb5-f30fb8a76014" groupingcriterion="BTSP1" aggregationtype="Avg" rate="10s" sourcetype="MEASURE" id="103f3e1c-52a2-3c09-bf0c-a148d7b0ff53" ratesupported="true" displayrate="10s" visible="false" autounit="false" sessiontype="live" fetch.dynamic.measures="true" autoscale="false" measuretype="TransactionMeasure" fetchbaseline="false" unit="number" name="Apdex of Page Class Actions - Apdex of User Actions" groupingvalue="CategoryDisplayCmdImpl" overridesource="true" fetchmeasurecolor="false" position="-1" uiunit="number">
+            <tagtolabel>
+              <taglabelentry value="ClassName Page Class Performance" key="BTSP1" />
+            </tagtolabel>
+            <lightweightuniquemeasureidentifier systemid="WebSphere Commerce" application="" parentkeyid="Apdex of Page Class Actions (Apdex of Page Actions;Page Actions;Apdex)" agentname="-" metricsimpledisplayname="Value" agenthost="-" metrickeyid="Value" keyid="Apdex of Page Class Actions (Apdex of Page Actions;Page Actions;Apdex)" metricgroupkey="Business Transaction Results" collector="" measuretype="TransactionMeasure">
+              <tag type="0" value="CategoryDisplayCmdImpl" key="BTSP1" />
+            </lightweightuniquemeasureidentifier>
+            <displaysourceinfo measureunit="number" agentname="-" agenthost="-" agentgroup="&lt;all-agents&gt;" transactionname="Apdex of Page Class Actions" measurerate="purepath" />
+          </chartsource>
+          <chartsource systemid="WebSphere Commerce" sourcecolor="RGB(138,120,7,255)" dynamicconfig="false" fetchthreshold="false" scale="0" sessionid="WebSphere Commerce" groupingcriterion="BTSP1" colorinheritancemode="random" aggregationtype="Avg" rate="10s" sourcetype="MEASURE" id="152d6079-c594-4597-a3ec-a8f8e2c7a87f" ratesupported="true" displayrate="10s" visible="true" autounit="false" sessiontype="live" fetch.dynamic.measures="true" autoscale="false" measuretype="TransactionMeasure" fetchbaseline="false" unit="number" name="Apdex of Page Class Actions - Apdex of User Actions" groupingvalue="SearchDisplayCmdImpl" overridesource="true" fetchmeasurecolor="false" position="2" uiunit="number">
+            <tagtolabel>
+              <taglabelentry value="ClassName Page Class Performance" key="BTSP1" />
+            </tagtolabel>
+            <lightweightuniquemeasureidentifier systemid="WebSphere Commerce" application="" parentkeyid="Apdex of Page Class Actions (Apdex of Page Actions;Page Actions;Apdex)" agentname="" metricsimpledisplayname="Value" agenthost="" metrickeyid="Value" keyid="Apdex of Page Class Actions (Apdex of Page Actions;Page Actions;Apdex)" metricgroupkey="Business Transaction Results" collector="" measuretype="TransactionMeasure" />
+            <displaysourceinfo measureunit="number" agentname="" agenthost="" agentgroup="&lt;all-agents&gt;" transactionname="Apdex of Page Class Actions" measurerate="purepath" />
+          </chartsource>
+          <chartsource systemid="WebSphere Commerce" sourcecolor="RGB(138,120,7,255)" dynamicconfig="true" fetchthreshold="false" scale="0" sessionid="WebSphere Commerce" parentid="81e18aa9-8aaa-43b7-b30e-1beb6f832257" groupingcriterion="BTSP1" aggregationtype="Avg" rate="10s" sourcetype="MEASURE" id="16b825b1-1213-3c0f-9583-7447da914fc4" ratesupported="true" displayrate="10s" visible="false" autounit="false" sessiontype="live" fetch.dynamic.measures="true" autoscale="false" measuretype="TransactionMeasure" fetchbaseline="false" unit="number" name="Apdex of Page Class Actions - Apdex of User Actions" groupingvalue="ProductDisplayCmdImpl" overridesource="true" fetchmeasurecolor="false" position="-1" uiunit="number">
+            <tagtolabel>
+              <taglabelentry value="ClassName Page Class Performance" key="BTSP1" />
+            </tagtolabel>
+            <lightweightuniquemeasureidentifier systemid="WebSphere Commerce" application="" parentkeyid="Apdex of Page Class Actions (Apdex of Page Actions;Page Actions;Apdex)" agentname="-" metricsimpledisplayname="Value" agenthost="-" metrickeyid="Value" keyid="Apdex of Page Class Actions (Apdex of Page Actions;Page Actions;Apdex)" metricgroupkey="Business Transaction Results" collector="" measuretype="TransactionMeasure">
+              <tag type="0" value="ProductDisplayCmdImpl" key="BTSP1" />
+            </lightweightuniquemeasureidentifier>
+            <displaysourceinfo measureunit="number" agentname="-" agenthost="-" agentgroup="&lt;all-agents&gt;" transactionname="Apdex of Page Class Actions" measurerate="purepath" />
+          </chartsource>
+          <chartsource systemid="WebSphere Commerce" sourcecolor="RGB(138,120,7,255)" dynamicconfig="true" fetchthreshold="false" scale="0" sessionid="WebSphere Commerce" parentid="152d6079-c594-4597-a3ec-a8f8e2c7a87f" groupingcriterion="BTSP1" aggregationtype="Avg" rate="10s" sourcetype="MEASURE" id="38cf6a2c-779a-34f6-aa20-b3cb2560dd79" ratesupported="true" displayrate="10s" visible="false" autounit="false" sessiontype="live" fetch.dynamic.measures="true" autoscale="false" measuretype="TransactionMeasure" fetchbaseline="false" unit="number" name="Apdex of Page Class Actions - Apdex of User Actions" groupingvalue="SearchDisplayCmdImpl" overridesource="true" fetchmeasurecolor="false" position="-1" uiunit="number">
+            <tagtolabel>
+              <taglabelentry value="ClassName Page Class Performance" key="BTSP1" />
+            </tagtolabel>
+            <lightweightuniquemeasureidentifier systemid="WebSphere Commerce" application="" parentkeyid="Apdex of Page Class Actions (Apdex of Page Actions;Page Actions;Apdex)" agentname="-" metricsimpledisplayname="Value" agenthost="-" metrickeyid="Value" keyid="Apdex of Page Class Actions (Apdex of Page Actions;Page Actions;Apdex)" metricgroupkey="Business Transaction Results" collector="" measuretype="TransactionMeasure">
+              <tag type="0" value="SearchDisplayCmdImpl" key="BTSP1" />
+            </lightweightuniquemeasureidentifier>
+            <displaysourceinfo measureunit="number" agentname="-" agenthost="-" agentgroup="&lt;all-agents&gt;" transactionname="Apdex of Page Class Actions" measurerate="purepath" />
+          </chartsource>
+          <chartsource systemid="WebSphere Commerce" sourcecolor="RGB(138,120,7,255)" dynamicconfig="false" fetchthreshold="false" scale="0" sessionid="WebSphere Commerce" groupingcriterion="BTSP1" colorinheritancemode="random" aggregationtype="Avg" rate="10s" sourcetype="MEASURE" id="5fa4ec21-9874-4aa4-bfb5-f30fb8a76014" ratesupported="true" displayrate="10s" visible="true" autounit="false" sessiontype="live" fetch.dynamic.measures="true" autoscale="false" measuretype="TransactionMeasure" fetchbaseline="false" unit="number" name="Apdex of Page Class Actions - Apdex of User Actions" groupingvalue="CategoryDisplayCmdImpl" overridesource="true" fetchmeasurecolor="false" position="3" uiunit="number">
+            <tagtolabel>
+              <taglabelentry value="ClassName Page Class Performance" key="BTSP1" />
+            </tagtolabel>
+            <lightweightuniquemeasureidentifier systemid="WebSphere Commerce" application="" parentkeyid="Apdex of Page Class Actions (Apdex of Page Actions;Page Actions;Apdex)" agentname="" metricsimpledisplayname="Value" agenthost="" metrickeyid="Value" keyid="Apdex of Page Class Actions (Apdex of Page Actions;Page Actions;Apdex)" metricgroupkey="Business Transaction Results" collector="" measuretype="TransactionMeasure" />
+            <displaysourceinfo measureunit="number" agentname="" agenthost="" agentgroup="&lt;all-agents&gt;" transactionname="Apdex of Page Class Actions" measurerate="purepath" />
+          </chartsource>
+          <chartsource systemid="WebSphere Commerce" sourcecolor="RGB(138,120,7,255)" dynamicconfig="false" fetchthreshold="false" scale="0" sessionid="WebSphere Commerce" groupingcriterion="BTSP1" colorinheritancemode="random" aggregationtype="Avg" rate="10s" sourcetype="MEASURE" id="73d9fe92-4791-466b-a338-a1cad5dd41c3" ratesupported="true" displayrate="10s" visible="true" autounit="false" sessiontype="live" fetch.dynamic.measures="true" autoscale="false" measuretype="TransactionMeasure" fetchbaseline="false" unit="number" name="Apdex of Page Class Actions - Apdex of User Actions" groupingvalue="OrderPrepareCmdImpl" overridesource="true" fetchmeasurecolor="false" position="5" uiunit="number">
+            <tagtolabel>
+              <taglabelentry value="ClassName Page Class Performance" key="BTSP1" />
+            </tagtolabel>
+            <lightweightuniquemeasureidentifier systemid="WebSphere Commerce" application="" parentkeyid="Apdex of Page Class Actions (Apdex of Page Actions;Page Actions;Apdex)" agentname="" metricsimpledisplayname="Value" agenthost="" metrickeyid="Value" keyid="Apdex of Page Class Actions (Apdex of Page Actions;Page Actions;Apdex)" metricgroupkey="Business Transaction Results" collector="" measuretype="TransactionMeasure" />
+            <displaysourceinfo measureunit="number" agentname="" agenthost="" agentgroup="&lt;all-agents&gt;" transactionname="Apdex of Page Class Actions" measurerate="purepath" />
+          </chartsource>
+          <chartsource systemid="WebSphere Commerce" sourcecolor="RGB(138,120,7,255)" dynamicconfig="true" fetchthreshold="false" scale="0" sessionid="WebSphere Commerce" parentid="b0e631eb-5e7a-4fc6-8f74-b53a41d61989" groupingcriterion="BTSP1" aggregationtype="Avg" rate="10s" sourcetype="MEASURE" id="7555a540-b5b9-3e01-9800-9c7b6758a7ea" ratesupported="true" displayrate="10s" visible="false" autounit="false" sessiontype="live" fetch.dynamic.measures="true" autoscale="false" measuretype="TransactionMeasure" fetchbaseline="false" unit="number" name="Apdex of Page Class Actions - Apdex of User Actions" groupingvalue="LogonCmdImpl" overridesource="true" fetchmeasurecolor="false" position="-1" uiunit="number">
+            <tagtolabel>
+              <taglabelentry value="ClassName Page Class Performance" key="BTSP1" />
+            </tagtolabel>
+            <lightweightuniquemeasureidentifier systemid="WebSphere Commerce" application="" parentkeyid="Apdex of Page Class Actions (Apdex of Page Actions;Page Actions;Apdex)" agentname="-" metricsimpledisplayname="Value" agenthost="-" metrickeyid="Value" keyid="Apdex of Page Class Actions (Apdex of Page Actions;Page Actions;Apdex)" metricgroupkey="Business Transaction Results" collector="" measuretype="TransactionMeasure">
+              <tag type="0" value="LogonCmdImpl" key="BTSP1" />
+            </lightweightuniquemeasureidentifier>
+            <displaysourceinfo measureunit="number" agentname="-" agenthost="-" agentgroup="&lt;all-agents&gt;" transactionname="Apdex of Page Class Actions" measurerate="purepath" />
+          </chartsource>
+          <splitconfig splitlayout="Horizontal" splitmode="PerSeries" />
+        </chart>
+        <table structuremode="measureHierarchy" sortcolumn="16" drawcolumn="-1" columnorder="0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19">
+          <column forcevisible="false" hidden="false" width="400" index="0" sort="None" />
+          <column forcevisible="false" hidden="true" width="100" index="1" sort="None" />
+          <column forcevisible="false" hidden="true" width="100" index="2" sort="None" />
+          <column forcevisible="false" hidden="false" width="25" index="3" sort="None" />
+          <column forcevisible="false" hidden="false" width="100" index="4" sort="None" />
+          <column forcevisible="false" hidden="true" width="100" index="5" sort="None" />
+          <column forcevisible="false" hidden="false" width="50" index="6" sort="None" />
+          <column forcevisible="false" hidden="true" width="75" index="7" sort="None" />
+          <column forcevisible="false" hidden="true" width="75" index="8" sort="None" />
+          <column forcevisible="false" hidden="true" width="75" index="9" sort="None" />
+          <column forcevisible="false" hidden="true" width="75" index="10" sort="None" />
+          <column forcevisible="false" hidden="true" width="75" index="11" sort="None" />
+          <column forcevisible="false" hidden="true" width="100" index="12" sort="None" />
+          <column forcevisible="false" hidden="false" width="105" index="13" sort="None" />
+          <column forcevisible="false" hidden="true" width="50" index="14" sort="None" />
+          <column forcevisible="false" hidden="true" width="50" index="15" sort="None" />
+          <column forcevisible="false" hidden="false" width="100" index="16" sort="Up" />
+          <column forcevisible="false" hidden="true" width="150" index="17" sort="None" />
+          <column forcevisible="false" hidden="true" width="150" index="18" sort="None" />
+          <column forcevisible="false" hidden="true" width="150" index="19" sort="None" />
+        </table>
+        <heatfieldconfig customevents="true" deploymentevents="true" smartmeasure="true" smartserver="true" filterconfirmed="false">
+          <incidentrules />
+        </heatfieldconfig>
+      </datamodelconfig>
+      <chartcolors />
+    </portletconfig>
+    <portletconfig usedashboardsourceforcompare="true" usespecificautorefresh="false" icon="com.dynatrace.diagnostics.sdk/default_16x16.png" description="" heightmode="AdjustToFontSize" locationascomparesource="false" source="server://dt2wscv8" usedashboardsource="true" com.dynatrace.diagnostics.portlets.text.textportletconfig.text="&#xD;&#xA;" folderid="org.eclipse.ui.internal.ViewStack@bee5268" com.dynatrace.diagnostics.portlets.text.textportletconfig.alignment="CENTER" locationassource="false" addfilterinfo="false" com.dynatrace.diagnostics.portlets.text.textportletconfig.wallpapercolor="RGB(181,176,204,255)" invertcolors="true" com.dynatrace.diagnostics.portlets.text.textportletconfig.backgroundstyle="center" name="Order Processing" ismaster="false" com.dynatrace.diagnostics.portlets.text.textportletconfig.defaultforegroundcolor="RGB(0,0,0,255)" typeid="com.dynatrace.diagnostics.portlets.text.Text" id="bc113a0d-6c2b-4d13-b4be-3d5329b3c6cd">
+      <reportconfig print.images="true" lines.per.table="100" override="false" optimizeequalcolumns="true" print.legends="true" reportposition="4" enabled="true" levels.per.tree="10" />
+      <filter>
+        <inheritancemap />
+      </filter>
+      <autorefreshconfig unit="MINUTES" time="5" enabled="false" />
+      <sashconfig displayoption="CHART_AND_TABLE" weights="1,1" />
+      <font name="Arial" style="BOLD" height="2" />
+    </portletconfig>
+    <portletconfig showabsolutevalues="false" usedashboardsourceforcompare="true" usespecificautorefresh="false" sessiontype="live" lastvalue="false" icon="com.dynatrace.diagnostics.sdk/chart_cust.png" description="" locationascomparesource="false" source="server://dt2wscv8" sessionid="WebSphere Commerce" usedashboardsource="true" folderid="org.eclipse.ui.internal.ViewStack@1a65f2c" locationassource="false" addfilterinfo="false" name="Response Time per Page Action" ismaster="false" typeid="com.dynatrace.diagnostics.portlets.chart.Chart" id="bcfbc440-70e3-467b-b257-07cecdd6e86b">
+      <reportconfig print.images="true" lines.per.table="100" override="false" optimizeequalcolumns="true" print.legends="true" reportposition="1" enabled="true" levels.per.tree="10" />
+      <filter>
+        <criterion mode="all" type="agents" completepurepath="true">
+          <textpattern name="agentname" type="contains" enabled="true" />
+          <textpattern name="agenthost" type="contains" enabled="true" />
+        </criterion>
+        <criterion mode="all" type="applications">
+          <applicationmetadata name="easyTravel portal" isdefault="false" />
+        </criterion>
+        <criterion type="btm" />
+        <criterion mode="all" type="hosts" completepurepath="true" />
+        <criterion type="timeframe">
+          <timeframe type="Last 6h" />
+        </criterion>
+        <criterion type="visits">
+          <visitidset />
+        </criterion>
+        <inheritancemap />
+      </filter>
+      <autorefreshconfig unit="MINUTES" time="5" enabled="false" />
+      <sashconfig displayoption="CHART" weights="500,500" />
+      <datamodelconfig>
+        <chart axis.x.title="" axis.y.title.show="true" showtooltips="true" bounds.y.enabled="true" showvalues="false" showtitle="false" logxaxis="false" title="" resolution="5min" axis.x.show="true" showname="true" bounds.y.lower="0.0" maxdisplayitems="10" zoomable="true" charttype="AreaChart" showheatfield="false" axis.y.show="true" isentitymarkable="false" orientation="Horizontal" yaxisalignment="0" legendposition="Bottom" axis.x.title.show="true" axis.y.title="" splitcharts="true" limititems="false" showlegend="false" lockyaxis="true" showlabels="true">
+          <legendcomposition>
+            <pielabelcomposition unit="true" value="true" />
+          </legendcomposition>
+          <chartsource systemid="WebSphere Commerce" sourcecolor="RGB(11,23,76,255)" dynamicconfig="false" fetchthreshold="true" scale="0" sessionid="WebSphere Commerce" colorinheritancemode="random" aggregationtype="Avg" rate="10s" sourcetype="MEASURE" id="9c087727-65a1-4184-b454-a47efc28e759" ratesupported="true" displayrate="10s" visible="true" autounit="false" sessiontype="live" fetch.dynamic.measures="false" autoscale="false" measuretype="TransactionMeasure" fetchbaseline="false" unit="ms" name="Order Processing UEM" groupingvalue="" overridesource="true" fetchmeasurecolor="false" position="6" uiunit="ms">
+            <lightweightuniquemeasureidentifier systemid="WebSphere Commerce" application="" parentkeyid="Order Processing UEM" agentname="" metricsimpledisplayname="Value" agenthost="" metrickeyid="Value" keyid="Order Processing UEM" metricgroupkey="Business Transaction Results" collector="" measuretype="TransactionMeasure" />
+            <displaysourceinfo measureunit="ms" agentname="" agenthost="" agentgroup="&lt;all-agents&gt;" transactionname="Order Processing UEM" measurerate="purepath" />
+          </chartsource>
+          <chartsource systemid="WebSphere Commerce" sourcecolor="RGB(11,23,76,255)" dynamicconfig="false" fetchthreshold="true" scale="0" sessionid="WebSphere Commerce" colorinheritancemode="random" aggregationtype="Avg" rate="10s" sourcetype="MEASURE" id="e9d5ffdf-2a7c-429c-a54b-7df9146d014d" ratesupported="true" displayrate="10s" visible="true" autounit="false" sessiontype="live" fetch.dynamic.measures="false" autoscale="false" measuretype="TransactionMeasure" fetchbaseline="false" unit="ms" name="Category-Display UEM" groupingvalue="" overridesource="true" fetchmeasurecolor="false" position="3" uiunit="ms">
+            <lightweightuniquemeasureidentifier systemid="WebSphere Commerce" application="" parentkeyid="Category-Display UEM" agentname="" metricsimpledisplayname="Value" agenthost="" metrickeyid="Value" keyid="Category-Display UEM" metricgroupkey="Business Transaction Results" collector="" measuretype="TransactionMeasure" />
+            <displaysourceinfo measureunit="ms" agentname="" agenthost="" agentgroup="&lt;all-agents&gt;" transactionname="Category-Display UEM" measurerate="purepath" />
+          </chartsource>
+          <chartsource systemid="WebSphere Commerce" sourcecolor="RGB(11,23,76,255)" dynamicconfig="false" fetchthreshold="true" scale="0" sessionid="WebSphere Commerce" colorinheritancemode="random" aggregationtype="Avg" rate="10s" sourcetype="MEASURE" id="067343f5-d7b6-456b-b102-1a8a616d9bfb" ratesupported="true" displayrate="10s" visible="true" autounit="false" sessiontype="live" fetch.dynamic.measures="false" autoscale="false" measuretype="TransactionMeasure" fetchbaseline="false" unit="ms" name="Product Detail Pages UEM" groupingvalue="" overridesource="true" fetchmeasurecolor="false" position="4" uiunit="ms">
+            <lightweightuniquemeasureidentifier systemid="WebSphere Commerce" application="" parentkeyid="Product Detail Pages UEM" agentname="" metricsimpledisplayname="Value" agenthost="" metrickeyid="Value" keyid="Product Detail Pages UEM" metricgroupkey="Business Transaction Results" collector="" measuretype="TransactionMeasure" />
+            <displaysourceinfo measureunit="ms" agentname="" agenthost="" agentgroup="&lt;all-agents&gt;" transactionname="Product Detail Pages UEM" measurerate="purepath" />
+          </chartsource>
+          <chartsource systemid="WebSphere Commerce" sourcecolor="RGB(11,23,76,255)" dynamicconfig="false" fetchthreshold="true" scale="0" sessionid="WebSphere Commerce" colorinheritancemode="random" aggregationtype="Avg" rate="10s" sourcetype="MEASURE" id="1d352d8d-6a5e-4c60-9990-33c81a4883c2" ratesupported="true" displayrate="10s" visible="true" autounit="false" sessiontype="live" fetch.dynamic.measures="false" autoscale="false" measuretype="TransactionMeasure" fetchbaseline="false" unit="ms" name="Order Preparation UEM" groupingvalue="" overridesource="true" fetchmeasurecolor="false" position="5" uiunit="ms">
+            <lightweightuniquemeasureidentifier systemid="WebSphere Commerce" application="" parentkeyid="Order Preparation UEM" agentname="" metricsimpledisplayname="Value" agenthost="" metrickeyid="Value" keyid="Order Preparation UEM" metricgroupkey="Business Transaction Results" collector="" measuretype="TransactionMeasure" />
+            <displaysourceinfo measureunit="ms" agentname="" agenthost="" agentgroup="&lt;all-agents&gt;" transactionname="Order Preparation UEM" measurerate="purepath" />
+          </chartsource>
+          <chartsource systemid="WebSphere Commerce" sourcecolor="RGB(11,23,76,255)" dynamicconfig="false" fetchthreshold="true" scale="0" sessionid="WebSphere Commerce" colorinheritancemode="random" aggregationtype="Avg" rate="10s" sourcetype="MEASURE" id="5245237a-034f-4baa-98b9-1391795acfda" ratesupported="true" displayrate="10s" visible="true" autounit="false" sessiontype="live" fetch.dynamic.measures="false" autoscale="false" measuretype="TransactionMeasure" fetchbaseline="false" unit="ms" name="SearchDisplay UEM" groupingvalue="" overridesource="true" fetchmeasurecolor="false" position="2" uiunit="ms">
+            <lightweightuniquemeasureidentifier systemid="WebSphere Commerce" application="" parentkeyid="SearchDisplay UEM" agentname="" metricsimpledisplayname="Value" agenthost="" metrickeyid="Value" keyid="SearchDisplay UEM" metricgroupkey="Business Transaction Results" collector="" measuretype="TransactionMeasure" />
+            <displaysourceinfo measureunit="ms" agentname="" agenthost="" agentgroup="&lt;all-agents&gt;" transactionname="SearchDisplay UEM" measurerate="purepath" />
+          </chartsource>
+          <chartsource systemid="WebSphere Commerce" sourcecolor="RGB(11,23,76,255)" dynamicconfig="false" fetchthreshold="true" scale="0" sessionid="WebSphere Commerce" colorinheritancemode="random" aggregationtype="Avg" rate="10s" sourcetype="MEASURE" id="61fa9806-e9db-425e-a4e0-483246e06d32" ratesupported="true" displayrate="10s" visible="true" autounit="false" sessiontype="live" fetch.dynamic.measures="false" autoscale="false" measuretype="TransactionMeasure" fetchbaseline="false" unit="ms" name="Login UEM" groupingvalue="" overridesource="true" fetchmeasurecolor="false" position="1" uiunit="ms">
+            <lightweightuniquemeasureidentifier systemid="WebSphere Commerce" application="" parentkeyid="Login UEM" agentname="" metricsimpledisplayname="Value" agenthost="" metrickeyid="Value" keyid="Login UEM" metricgroupkey="Business Transaction Results" collector="" measuretype="TransactionMeasure" />
+            <displaysourceinfo measureunit="ms" agentname="" agenthost="" agentgroup="&lt;all-agents&gt;" transactionname="Login UEM" measurerate="purepath" />
+          </chartsource>
+          <splitconfig splitlayout="Horizontal" splitmode="PerSeries" />
+        </chart>
+        <table structuremode="measureHierarchy" sortcolumn="16" drawcolumn="-1" columnorder="0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19">
+          <column forcevisible="false" hidden="false" width="624" index="0" sort="None" />
+          <column forcevisible="false" hidden="true" width="100" index="1" sort="None" />
+          <column forcevisible="false" hidden="true" width="100" index="2" sort="None" />
+          <column forcevisible="false" hidden="false" width="25" index="3" sort="None" />
+          <column forcevisible="false" hidden="false" width="100" index="4" sort="None" />
+          <column forcevisible="false" hidden="true" width="100" index="5" sort="None" />
+          <column forcevisible="false" hidden="false" width="50" index="6" sort="None" />
+          <column forcevisible="false" hidden="true" width="75" index="7" sort="None" />
+          <column forcevisible="false" hidden="true" width="75" index="8" sort="None" />
+          <column forcevisible="false" hidden="true" width="75" index="9" sort="None" />
+          <column forcevisible="false" hidden="true" width="75" index="10" sort="None" />
+          <column forcevisible="false" hidden="true" width="75" index="11" sort="None" />
+          <column forcevisible="false" hidden="true" width="100" index="12" sort="None" />
+          <column forcevisible="false" hidden="false" width="105" index="13" sort="None" />
+          <column forcevisible="false" hidden="true" width="50" index="14" sort="None" />
+          <column forcevisible="false" hidden="true" width="50" index="15" sort="None" />
+          <column forcevisible="false" hidden="false" width="100" index="16" sort="Up" />
+          <column forcevisible="false" hidden="true" width="150" index="17" sort="None" />
+          <column forcevisible="false" hidden="true" width="150" index="18" sort="None" />
+          <column forcevisible="false" hidden="true" width="150" index="19" sort="None" />
+        </table>
+        <heatfieldconfig customevents="true" deploymentevents="true" smartmeasure="true" smartserver="true" filterconfirmed="false">
+          <incidentrules />
+        </heatfieldconfig>
+      </datamodelconfig>
+      <chartcolors />
+    </portletconfig>
+    <portletconfig usedashboardsourceforcompare="true" usespecificautorefresh="false" icon="com.dynatrace.diagnostics.sdk/default_16x16.png" description="" heightmode="AdjustToFontSize" locationascomparesource="false" source="server://dt2wscv8" usedashboardsource="true" com.dynatrace.diagnostics.portlets.text.textportletconfig.text="&#xD;&#xA;" folderid="org.eclipse.ui.internal.ViewStack@57717ab9" com.dynatrace.diagnostics.portlets.text.textportletconfig.alignment="CENTER" locationassource="false" addfilterinfo="false" com.dynatrace.diagnostics.portlets.text.textportletconfig.wallpapercolor="RGB(181,176,204,255)" invertcolors="true" com.dynatrace.diagnostics.portlets.text.textportletconfig.backgroundstyle="center" name="Product Detail" ismaster="false" com.dynatrace.diagnostics.portlets.text.textportletconfig.defaultforegroundcolor="RGB(0,0,0,255)" typeid="com.dynatrace.diagnostics.portlets.text.Text" id="be5d985d-2fc5-4093-823c-85d402a69e01">
+      <reportconfig print.images="true" lines.per.table="100" override="false" optimizeequalcolumns="true" print.legends="true" reportposition="4" enabled="true" levels.per.tree="10" />
+      <filter>
+        <inheritancemap />
+      </filter>
+      <autorefreshconfig unit="MINUTES" time="5" enabled="false" />
+      <sashconfig displayoption="CHART_AND_TABLE" weights="1,1" />
+      <font name="Arial" style="BOLD" height="2" />
+    </portletconfig>
+    <portletconfig usedashboardsourceforcompare="true" usespecificautorefresh="false" icon="com.dynatrace.diagnostics.sdk/default_16x16.png" description="" heightmode="AdjustToFontSize" locationascomparesource="false" source="server://dt2wscv8" usedashboardsource="true" com.dynatrace.diagnostics.portlets.text.textportletconfig.text="&#xD;&#xA;" folderid="org.eclipse.ui.internal.ViewStack@6823fb15" com.dynatrace.diagnostics.portlets.text.textportletconfig.alignment="CENTER" locationassource="false" addfilterinfo="false" com.dynatrace.diagnostics.portlets.text.textportletconfig.wallpapercolor="RGB(181,176,204,255)" invertcolors="true" com.dynatrace.diagnostics.portlets.text.textportletconfig.backgroundstyle="center" name="Category Display" ismaster="false" com.dynatrace.diagnostics.portlets.text.textportletconfig.defaultforegroundcolor="RGB(0,0,0,255)" typeid="com.dynatrace.diagnostics.portlets.text.Text" id="d38a7951-43f3-4d9d-b87f-ba34881ba765">
+      <reportconfig print.images="true" lines.per.table="100" override="false" optimizeequalcolumns="true" print.legends="true" reportposition="4" enabled="true" levels.per.tree="10" />
+      <filter>
+        <inheritancemap />
+      </filter>
+      <autorefreshconfig unit="MINUTES" time="5" enabled="false" />
+      <sashconfig displayoption="CHART_AND_TABLE" weights="1,1" />
+      <font name="Arial" style="BOLD" height="2" />
+    </portletconfig>
+    <portletconfig usedashboardsourceforcompare="true" usespecificautorefresh="false" icon="com.dynatrace.diagnostics.sdk/default_16x16.png" description="" heightmode="AdjustToFontSize" locationascomparesource="false" source="server://dt2wscv8" usedashboardsource="true" com.dynatrace.diagnostics.portlets.text.textportletconfig.text="&#xD;&#xA;" folderid="org.eclipse.ui.internal.ViewStack@66c5908d" com.dynatrace.diagnostics.portlets.text.textportletconfig.alignment="CENTER" locationassource="false" addfilterinfo="false" com.dynatrace.diagnostics.portlets.text.textportletconfig.wallpapercolor="RGB(181,176,204,255)" invertcolors="true" com.dynatrace.diagnostics.portlets.text.textportletconfig.backgroundstyle="center" name="Search Display" ismaster="false" com.dynatrace.diagnostics.portlets.text.textportletconfig.defaultforegroundcolor="RGB(0,0,0,255)" typeid="com.dynatrace.diagnostics.portlets.text.Text" id="fac0d558-2d8d-4429-9bc5-d7f0f737549c">
+      <reportconfig print.images="true" lines.per.table="100" override="false" optimizeequalcolumns="true" print.legends="true" reportposition="4" enabled="true" levels.per.tree="10" />
+      <filter>
+        <inheritancemap />
+      </filter>
+      <autorefreshconfig unit="MINUTES" time="5" enabled="false" />
+      <sashconfig displayoption="CHART_AND_TABLE" weights="1,1" />
+      <font name="Arial" style="BOLD" height="2" />
+    </portletconfig>
+    <portletconfig showabsolutevalues="false" usedashboardsourceforcompare="true" usespecificautorefresh="false" sessiontype="live" lastvalue="false" icon="com.dynatrace.diagnostics.sdk/chart_cust.png" description="" locationascomparesource="false" source="server://dt2wscv8" sessionid="WebSphere Commerce" usedashboardsource="true" folderid="org.eclipse.ui.internal.ViewStack@1ec98f" locationassource="false" addfilterinfo="false" name="Failure Rate per Page Action" ismaster="false" typeid="com.dynatrace.diagnostics.portlets.chart.Chart" id="fc07603c-4017-4161-8f58-1b6cccbdccf7">
+      <reportconfig print.images="true" lines.per.table="100" override="false" optimizeequalcolumns="true" print.legends="true" reportposition="1" enabled="true" levels.per.tree="10" />
+      <filter>
+        <criterion mode="all" type="agents" completepurepath="true">
+          <textpattern name="agentname" type="contains" enabled="true" />
+          <textpattern name="agenthost" type="contains" enabled="true" />
+        </criterion>
+        <criterion mode="all" type="applications">
+          <applicationmetadata name="easyTravel portal" isdefault="false" />
+        </criterion>
+        <criterion type="btm" />
+        <criterion mode="all" type="hosts" completepurepath="true" />
+        <criterion type="timeframe">
+          <timeframe type="Last 6h" />
+        </criterion>
+        <criterion type="visits">
+          <visitidset />
+        </criterion>
+        <inheritancemap />
+      </filter>
+      <autorefreshconfig unit="MINUTES" time="5" enabled="false" />
+      <sashconfig displayoption="CHART" weights="500,500" />
+      <datamodelconfig>
+        <chart axis.x.title="" axis.y.title.show="true" showtooltips="true" bounds.y.enabled="false" showvalues="false" showtitle="false" logxaxis="false" title="" resolution="Auto" axis.x.show="true" showname="true" maxdisplayitems="10" zoomable="true" charttype="MeterChart" showheatfield="true" axis.y.show="true" isentitymarkable="false" orientation="Horizontal" yaxisalignment="0" legendposition="Bottom" axis.x.title.show="true" axis.y.title="" splitcharts="true" limititems="false" showlegend="false" lockyaxis="true" showlabels="true">
+          <legendcomposition>
+            <pielabelcomposition unit="true" value="true" />
+          </legendcomposition>
+          <chartsource systemid="WebSphere Commerce" sourcecolor="RGB(186,42,32,255)" dynamicconfig="false" fetchthreshold="false" scale="0" sessionid="WebSphere Commerce" colorinheritancemode="random" aggregationtype="Avg" rate="10s" sourcetype="MEASURE" id="a20cc768-fb7d-4db3-a403-4311c58c8d9d" ratesupported="true" displayrate="10s" visible="true" autounit="false" sessiontype="live" fetch.dynamic.measures="false" autoscale="false" measuretype="ErrorDetectionMeasure" fetchbaseline="false" unit="percent" name="Failed User Action Percentage of Login UEM" groupingvalue="" overridesource="true" fetchmeasurecolor="false" position="1" uiunit="percent">
+            <lightweightuniquemeasureidentifier systemid="WebSphere Commerce" application="" parentkeyid="Failed Page Action Percentage of Login UEM" agentname="" metricsimpledisplayname="Failed User Action Percentage" agenthost="" metrickeyid="Failed Page Action Percentage" keyid="Failed Page Action Percentage of Login UEM" metricgroupkey="Error Detection" collector="" measuretype="ErrorDetectionMeasure" />
+            <displaysourceinfo measureunit="percent" agentname="" agenthost="" agentgroup="&lt;all-agents&gt;" measurerate="purepath" />
+          </chartsource>
+          <chartsource systemid="WebSphere Commerce" sourcecolor="RGB(186,42,32,255)" dynamicconfig="false" fetchthreshold="false" scale="0" sessionid="WebSphere Commerce" colorinheritancemode="random" aggregationtype="Avg" rate="10s" sourcetype="MEASURE" id="c3056cd1-8fc7-4434-bfbc-78e5bad8b3bc" ratesupported="true" displayrate="10s" visible="true" autounit="false" sessiontype="live" fetch.dynamic.measures="false" autoscale="false" measuretype="ErrorDetectionMeasure" fetchbaseline="false" unit="percent" name="Failed Transaction Percentage of SearchDisplay UEM" groupingvalue="" overridesource="true" fetchmeasurecolor="false" position="2" uiunit="percent">
+            <lightweightuniquemeasureidentifier systemid="WebSphere Commerce" application="" parentkeyid="Failed Transaction Percentage of SearchDisplay UEM" agentname="" metricsimpledisplayname="Failed Transaction Percentage" agenthost="" metrickeyid="Failed Transaction Percentage" keyid="Failed Transaction Percentage of SearchDisplay UEM" metricgroupkey="Error Detection" collector="" measuretype="ErrorDetectionMeasure" />
+            <displaysourceinfo measureunit="percent" agentname="" agenthost="" agentgroup="&lt;all-agents&gt;" measurerate="purepath" />
+          </chartsource>
+          <chartsource systemid="WebSphere Commerce" sourcecolor="RGB(186,42,32,255)" dynamicconfig="false" fetchthreshold="false" scale="0" sessionid="WebSphere Commerce" colorinheritancemode="random" aggregationtype="Avg" rate="10s" sourcetype="MEASURE" id="ef8330eb-8896-4187-aba7-5e33d7ac623d" ratesupported="true" displayrate="10s" visible="true" autounit="false" sessiontype="live" fetch.dynamic.measures="false" autoscale="false" measuretype="ErrorDetectionMeasure" fetchbaseline="false" unit="percent" name="Failed User Action Percentage of Category-Display UEM" groupingvalue="" overridesource="true" fetchmeasurecolor="false" position="3" uiunit="percent">
+            <lightweightuniquemeasureidentifier systemid="WebSphere Commerce" application="" parentkeyid="Failed Page Action Percentage of Category-Display UEM" agentname="" metricsimpledisplayname="Failed User Action Percentage" agenthost="" metrickeyid="Failed Page Action Percentage" keyid="Failed Page Action Percentage of Category-Display UEM" metricgroupkey="Error Detection" collector="" measuretype="ErrorDetectionMeasure" />
+            <displaysourceinfo measureunit="percent" agentname="" agenthost="" agentgroup="&lt;all-agents&gt;" measurerate="purepath" />
+          </chartsource>
+          <chartsource systemid="WebSphere Commerce" sourcecolor="RGB(186,42,32,255)" dynamicconfig="false" fetchthreshold="false" scale="0" sessionid="WebSphere Commerce" colorinheritancemode="random" aggregationtype="Avg" rate="10s" sourcetype="MEASURE" id="f9af6d55-78dc-40d5-b8e6-f9257006def5" ratesupported="true" displayrate="10s" visible="true" autounit="false" sessiontype="live" fetch.dynamic.measures="false" autoscale="false" measuretype="ErrorDetectionMeasure" fetchbaseline="false" unit="percent" name="Failed User Action Percentage of Order Preparation UEM" groupingvalue="" overridesource="true" fetchmeasurecolor="false" position="5" uiunit="percent">
+            <lightweightuniquemeasureidentifier systemid="WebSphere Commerce" application="" parentkeyid="Failed Page Action Percentage of Order Preparation UEM" agentname="" metricsimpledisplayname="Failed User Action Percentage" agenthost="" metrickeyid="Failed Page Action Percentage" keyid="Failed Page Action Percentage of Order Preparation UEM" metricgroupkey="Error Detection" collector="" measuretype="ErrorDetectionMeasure" />
+            <displaysourceinfo measureunit="percent" agentname="" agenthost="" agentgroup="&lt;all-agents&gt;" measurerate="purepath" />
+          </chartsource>
+          <chartsource systemid="WebSphere Commerce" sourcecolor="RGB(186,42,32,255)" dynamicconfig="false" fetchthreshold="false" scale="0" sessionid="WebSphere Commerce" colorinheritancemode="random" aggregationtype="Avg" rate="10s" sourcetype="MEASURE" id="56765dec-ea4a-4401-aac5-2bbe00ad8f9e" ratesupported="true" displayrate="10s" visible="true" autounit="false" sessiontype="live" fetch.dynamic.measures="false" autoscale="false" measuretype="ErrorDetectionMeasure" fetchbaseline="false" unit="percent" name="Failed User Action Percentage of Order Processing UEM" groupingvalue="" overridesource="true" fetchmeasurecolor="false" position="6" uiunit="percent">
+            <lightweightuniquemeasureidentifier systemid="WebSphere Commerce" application="" parentkeyid="Failed Page Action Percentage of Order Processing UEM" agentname="" metricsimpledisplayname="Failed User Action Percentage" agenthost="" metrickeyid="Failed Page Action Percentage" keyid="Failed Page Action Percentage of Order Processing UEM" metricgroupkey="Error Detection" collector="" measuretype="ErrorDetectionMeasure" />
+            <displaysourceinfo measureunit="percent" agentname="" agenthost="" agentgroup="&lt;all-agents&gt;" measurerate="purepath" />
+          </chartsource>
+          <chartsource systemid="WebSphere Commerce" sourcecolor="RGB(186,42,32,255)" dynamicconfig="false" fetchthreshold="false" scale="0" sessionid="WebSphere Commerce" colorinheritancemode="random" aggregationtype="Avg" rate="10s" sourcetype="MEASURE" id="7f222abd-56a0-4f26-afe3-c68d7ef22abd" ratesupported="true" displayrate="10s" visible="true" autounit="false" sessiontype="live" fetch.dynamic.measures="false" autoscale="false" measuretype="ErrorDetectionMeasure" fetchbaseline="false" unit="percent" name="Failed User Action Percentage of Product Detail Pages UEM" groupingvalue="" overridesource="true" fetchmeasurecolor="false" position="4" uiunit="percent">
+            <lightweightuniquemeasureidentifier systemid="WebSphere Commerce" application="" parentkeyid="Failed Page Action Percentage of Product Detail Pages UEM" agentname="" metricsimpledisplayname="Failed User Action Percentage" agenthost="" metrickeyid="Failed Page Action Percentage" keyid="Failed Page Action Percentage of Product Detail Pages UEM" metricgroupkey="Error Detection" collector="" measuretype="ErrorDetectionMeasure" />
+            <displaysourceinfo measureunit="percent" agentname="" agenthost="" agentgroup="&lt;all-agents&gt;" measurerate="purepath" />
+          </chartsource>
+          <splitconfig splitlayout="Horizontal" splitmode="PerSeries" />
+        </chart>
+        <table structuremode="measureHierarchy" sortcolumn="16" drawcolumn="-1" columnorder="0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19">
+          <column forcevisible="false" hidden="false" width="624" index="0" sort="None" />
+          <column forcevisible="false" hidden="true" width="100" index="1" sort="None" />
+          <column forcevisible="false" hidden="true" width="100" index="2" sort="None" />
+          <column forcevisible="false" hidden="false" width="25" index="3" sort="None" />
+          <column forcevisible="false" hidden="false" width="100" index="4" sort="None" />
+          <column forcevisible="false" hidden="true" width="100" index="5" sort="None" />
+          <column forcevisible="false" hidden="false" width="50" index="6" sort="None" />
+          <column forcevisible="false" hidden="true" width="75" index="7" sort="None" />
+          <column forcevisible="false" hidden="true" width="75" index="8" sort="None" />
+          <column forcevisible="false" hidden="true" width="75" index="9" sort="None" />
+          <column forcevisible="false" hidden="true" width="75" index="10" sort="None" />
+          <column forcevisible="false" hidden="true" width="75" index="11" sort="None" />
+          <column forcevisible="false" hidden="true" width="100" index="12" sort="None" />
+          <column forcevisible="false" hidden="false" width="105" index="13" sort="None" />
+          <column forcevisible="false" hidden="true" width="50" index="14" sort="None" />
+          <column forcevisible="false" hidden="true" width="50" index="15" sort="None" />
+          <column forcevisible="false" hidden="false" width="100" index="16" sort="Up" />
+          <column forcevisible="false" hidden="true" width="150" index="17" sort="None" />
+          <column forcevisible="false" hidden="true" width="150" index="18" sort="None" />
+          <column forcevisible="false" hidden="true" width="150" index="19" sort="None" />
+        </table>
+        <heatfieldconfig customevents="true" deploymentevents="true" smartmeasure="true" smartserver="true" filterconfirmed="false">
+          <incidentrules />
+        </heatfieldconfig>
+      </datamodelconfig>
+      <chartcolors />
+    </portletconfig>
+    <portletconfig showabsolutevalues="false" usedashboardsourceforcompare="true" usespecificautorefresh="false" sessiontype="live" lastvalue="false" icon="com.dynatrace.diagnostics.sdk/chart_cust.png" description="" locationascomparesource="false" source="server://dt2wscv8" sessionid="WebSphere Commerce" usedashboardsource="true" folderid="org.eclipse.ui.internal.ViewStack@1cbd976" locationassource="false" addfilterinfo="false" name="Page Count per Visit" ismaster="false" typeid="com.dynatrace.diagnostics.portlets.chart.Chart" id="204eabbc-90f3-4f0f-8f8e-003ea73d2df9">
+      <reportconfig print.images="true" lines.per.table="100" override="false" optimizeequalcolumns="true" print.legends="true" reportposition="1" enabled="true" levels.per.tree="10" />
+      <filter>
+        <criterion mode="all" type="agents" completepurepath="true">
+          <textpattern name="agentname" type="contains" enabled="true" />
+          <textpattern name="agenthost" type="contains" enabled="true" />
+        </criterion>
+        <criterion mode="all" type="applications">
+          <applicationmetadata name="easyTravel portal" isdefault="false" />
+        </criterion>
+        <criterion type="btm" />
+        <criterion mode="all" type="hosts" completepurepath="true" />
+        <criterion type="timeframe">
+          <timeframe type="Last 6h" />
+        </criterion>
+        <criterion type="visits">
+          <visitidset />
+        </criterion>
+        <inheritancemap />
+      </filter>
+      <autorefreshconfig unit="MINUTES" time="5" enabled="false" />
+      <sashconfig displayoption="CHART" weights="500,500" />
+      <datamodelconfig>
+        <chart axis.x.title="" axis.y.title.show="true" showtooltips="true" bounds.y.enabled="false" showvalues="false" showtitle="false" logxaxis="false" title="" resolution="Auto" axis.x.show="true" showname="true" maxdisplayitems="10" zoomable="true" charttype="MeterChart" showheatfield="true" axis.y.show="true" isentitymarkable="false" orientation="Horizontal" yaxisalignment="0" legendposition="Bottom" axis.x.title.show="true" axis.y.title="" splitcharts="true" limititems="false" showlegend="false" lockyaxis="true" showlabels="true">
+          <legendcomposition measure="true" splittings="true">
+            <pielabelcomposition unit="true" value="true" />
+          </legendcomposition>
+          <chartsource systemid="WebSphere Commerce" sourcecolor="RGB(79,7,2,255)" dynamicconfig="false" fetchthreshold="false" scale="0" sessionid="WebSphere Commerce" colorinheritancemode="random" aggregationtype="Count" rate="10s" sourcetype="MEASURE" id="90547e28-8a5c-48de-b5e4-cf5cd4e6d00e" ratesupported="true" displayrate="10s" visible="true" autounit="false" sessiontype="live" fetch.dynamic.measures="false" autoscale="false" measuretype="TransactionMeasure" fetchbaseline="false" unit="ms" name="Category-Display UEM" groupingvalue="" overridesource="true" fetchmeasurecolor="false" position="3" uiunit="ms">
+            <lightweightuniquemeasureidentifier systemid="WebSphere Commerce" application="" parentkeyid="Category-Display UEM" agentname="" metricsimpledisplayname="Value" agenthost="" metrickeyid="Value" keyid="Category-Display UEM" metricgroupkey="Business Transaction Results" collector="" measuretype="TransactionMeasure" />
+            <displaysourceinfo measureunit="ms" agentname="" agenthost="" agentgroup="&lt;all-agents&gt;" transactionname="Category-Display UEM" measurerate="purepath" />
+          </chartsource>
+          <chartsource systemid="WebSphere Commerce" sourcecolor="RGB(79,7,2,255)" dynamicconfig="false" fetchthreshold="false" scale="0" sessionid="WebSphere Commerce" colorinheritancemode="random" aggregationtype="Count" rate="10s" sourcetype="MEASURE" id="9b7c5e8f-6186-41c0-a699-339d91af5dd9" ratesupported="true" displayrate="10s" visible="true" autounit="false" sessiontype="live" fetch.dynamic.measures="false" autoscale="false" measuretype="TransactionMeasure" fetchbaseline="false" unit="ms" name="SearchDisplay UEM" groupingvalue="" overridesource="true" fetchmeasurecolor="false" position="2" uiunit="ms">
+            <lightweightuniquemeasureidentifier systemid="WebSphere Commerce" application="" parentkeyid="SearchDisplay UEM" agentname="" metricsimpledisplayname="Value" agenthost="" metrickeyid="Value" keyid="SearchDisplay UEM" metricgroupkey="Business Transaction Results" collector="" measuretype="TransactionMeasure" />
+            <displaysourceinfo measureunit="ms" agentname="" agenthost="" agentgroup="&lt;all-agents&gt;" transactionname="SearchDisplay UEM" measurerate="purepath" />
+          </chartsource>
+          <chartsource systemid="WebSphere Commerce" sourcecolor="RGB(79,7,2,255)" dynamicconfig="false" fetchthreshold="false" scale="0" sessionid="WebSphere Commerce" colorinheritancemode="random" aggregationtype="Count" rate="10s" sourcetype="MEASURE" id="9f561c23-7805-4c91-a9ac-65a3538ff67f" ratesupported="true" displayrate="10s" visible="true" autounit="false" sessiontype="live" fetch.dynamic.measures="false" autoscale="false" measuretype="TransactionMeasure" fetchbaseline="false" unit="ms" name="Login UEM" groupingvalue="" overridesource="true" fetchmeasurecolor="false" position="1" uiunit="ms">
+            <lightweightuniquemeasureidentifier systemid="WebSphere Commerce" application="" parentkeyid="Login UEM" agentname="" metricsimpledisplayname="Value" agenthost="" metrickeyid="Value" keyid="Login UEM" metricgroupkey="Business Transaction Results" collector="" measuretype="TransactionMeasure" />
+            <displaysourceinfo measureunit="ms" agentname="" agenthost="" agentgroup="&lt;all-agents&gt;" transactionname="Login UEM" measurerate="purepath" />
+          </chartsource>
+          <chartsource systemid="WebSphere Commerce" sourcecolor="RGB(79,7,2,255)" dynamicconfig="false" fetchthreshold="false" scale="0" sessionid="WebSphere Commerce" colorinheritancemode="random" aggregationtype="Count" rate="10s" sourcetype="MEASURE" id="d8dd08c3-bc5e-4a9e-826f-640c4c1417ef" ratesupported="true" displayrate="10s" visible="true" autounit="false" sessiontype="live" fetch.dynamic.measures="false" autoscale="false" measuretype="TransactionMeasure" fetchbaseline="false" unit="ms" name="Order Preparation UEM" groupingvalue="" overridesource="true" fetchmeasurecolor="false" position="5" uiunit="ms">
+            <lightweightuniquemeasureidentifier systemid="WebSphere Commerce" application="" parentkeyid="Order Preparation UEM" agentname="" metricsimpledisplayname="Value" agenthost="" metrickeyid="Value" keyid="Order Preparation UEM" metricgroupkey="Business Transaction Results" collector="" measuretype="TransactionMeasure" />
+            <displaysourceinfo measureunit="ms" agentname="" agenthost="" agentgroup="&lt;all-agents&gt;" transactionname="Order Preparation UEM" measurerate="purepath" />
+          </chartsource>
+          <chartsource systemid="WebSphere Commerce" sourcecolor="RGB(79,7,2,255)" dynamicconfig="false" fetchthreshold="false" scale="0" sessionid="WebSphere Commerce" colorinheritancemode="random" aggregationtype="Count" rate="10s" sourcetype="MEASURE" id="efd78a41-1ca2-4662-9ed4-d63da4df1b04" ratesupported="true" displayrate="10s" visible="true" autounit="false" sessiontype="live" fetch.dynamic.measures="false" autoscale="false" measuretype="TransactionMeasure" fetchbaseline="false" unit="ms" name="Product Detail Pages UEM" groupingvalue="" overridesource="true" fetchmeasurecolor="false" position="4" uiunit="ms">
+            <lightweightuniquemeasureidentifier systemid="WebSphere Commerce" application="" parentkeyid="Product Detail Pages UEM" agentname="" metricsimpledisplayname="Value" agenthost="" metrickeyid="Value" keyid="Product Detail Pages UEM" metricgroupkey="Business Transaction Results" collector="" measuretype="TransactionMeasure" />
+            <displaysourceinfo measureunit="ms" agentname="" agenthost="" agentgroup="&lt;all-agents&gt;" transactionname="Product Detail Pages UEM" measurerate="purepath" />
+          </chartsource>
+          <chartsource systemid="WebSphere Commerce" sourcecolor="RGB(79,7,2,255)" dynamicconfig="false" fetchthreshold="false" scale="0" sessionid="WebSphere Commerce" colorinheritancemode="random" aggregationtype="Count" rate="10s" sourcetype="MEASURE" id="004429e0-e406-45ad-b52a-df7d39259ff9" ratesupported="true" displayrate="10s" visible="true" autounit="false" sessiontype="live" fetch.dynamic.measures="false" autoscale="false" measuretype="TransactionMeasure" fetchbaseline="false" unit="ms" name="Order Processing UEM" groupingvalue="" overridesource="true" fetchmeasurecolor="false" position="6" uiunit="ms">
+            <lightweightuniquemeasureidentifier systemid="WebSphere Commerce" application="" parentkeyid="Order Processing UEM" agentname="" metricsimpledisplayname="Value" agenthost="" metrickeyid="Value" keyid="Order Processing UEM" metricgroupkey="Business Transaction Results" collector="" measuretype="TransactionMeasure" />
+            <displaysourceinfo measureunit="ms" agentname="" agenthost="" agentgroup="&lt;all-agents&gt;" transactionname="Order Processing UEM" measurerate="purepath" />
+          </chartsource>
+          <splitconfig splitlayout="Horizontal" splitmode="PerSeries" />
+        </chart>
+        <table structuremode="measureHierarchy" sortcolumn="16" drawcolumn="-1" columnorder="0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19">
+          <column forcevisible="false" hidden="false" width="400" index="0" sort="None" />
+          <column forcevisible="false" hidden="true" width="100" index="1" sort="None" />
+          <column forcevisible="false" hidden="true" width="100" index="2" sort="None" />
+          <column forcevisible="false" hidden="false" width="25" index="3" sort="None" />
+          <column forcevisible="false" hidden="false" width="100" index="4" sort="None" />
+          <column forcevisible="false" hidden="true" width="100" index="5" sort="None" />
+          <column forcevisible="false" hidden="false" width="50" index="6" sort="None" />
+          <column forcevisible="false" hidden="true" width="75" index="7" sort="None" />
+          <column forcevisible="false" hidden="true" width="75" index="8" sort="None" />
+          <column forcevisible="false" hidden="true" width="75" index="9" sort="None" />
+          <column forcevisible="false" hidden="true" width="75" index="10" sort="None" />
+          <column forcevisible="false" hidden="true" width="75" index="11" sort="None" />
+          <column forcevisible="false" hidden="true" width="100" index="12" sort="None" />
+          <column forcevisible="false" hidden="false" width="105" index="13" sort="None" />
+          <column forcevisible="false" hidden="true" width="50" index="14" sort="None" />
+          <column forcevisible="false" hidden="true" width="50" index="15" sort="None" />
+          <column forcevisible="false" hidden="false" width="100" index="16" sort="Up" />
+          <column forcevisible="false" hidden="true" width="150" index="17" sort="None" />
+          <column forcevisible="false" hidden="true" width="150" index="18" sort="None" />
+          <column forcevisible="false" hidden="true" width="150" index="19" sort="None" />
+        </table>
+        <heatfieldconfig customevents="true" deploymentevents="true" smartmeasure="true" smartserver="true" filterconfirmed="false">
+          <incidentrules />
+        </heatfieldconfig>
+      </datamodelconfig>
+      <chartcolors />
+    </portletconfig>
+    <portletconfig showabsolutevalues="false" usedashboardsourceforcompare="true" usespecificautorefresh="false" sessiontype="live" lastvalue="false" icon="com.dynatrace.diagnostics.sdk/chart_cust.png" description="" locationascomparesource="false" source="server://dt2wscv8" sessionid="WebSphere Commerce" usedashboardsource="true" folderid="org.eclipse.ui.internal.ViewStack@1d7ee3c" locationassource="false" addfilterinfo="false" name="Exit Page Count per Visit" ismaster="false" typeid="com.dynatrace.diagnostics.portlets.chart.Chart" id="374b0970-43fb-4919-83a9-e3819ef4a949">
+      <reportconfig print.images="true" lines.per.table="100" override="false" optimizeequalcolumns="true" print.legends="true" reportposition="1" enabled="true" levels.per.tree="10" />
+      <filter>
+        <criterion mode="all" type="agents" completepurepath="true">
+          <textpattern name="agentname" type="contains" enabled="true" />
+          <textpattern name="agenthost" type="contains" enabled="true" />
+        </criterion>
+        <criterion mode="all" type="applications">
+          <applicationmetadata name="easyTravel portal" isdefault="false" />
+        </criterion>
+        <criterion type="btm" />
+        <criterion mode="all" type="hosts" completepurepath="true" />
+        <criterion type="timeframe">
+          <timeframe type="Last 6h" />
+        </criterion>
+        <criterion type="visits">
+          <visitidset />
+        </criterion>
+        <inheritancemap />
+      </filter>
+      <autorefreshconfig unit="MINUTES" time="5" enabled="false" />
+      <sashconfig displayoption="CHART" weights="587,412" />
+      <datamodelconfig>
+        <chart axis.x.title="" axis.y.title.show="true" showtooltips="true" bounds.y.enabled="true" showvalues="false" showtitle="false" logxaxis="false" title="" resolution="Auto" axis.x.show="true" showname="true" bounds.y.lower="0.0" maxdisplayitems="10" zoomable="true" charttype="MeterChart" showheatfield="true" axis.y.show="true" isentitymarkable="false" orientation="Horizontal" yaxisalignment="0" legendposition="Bottom" axis.x.title.show="true" axis.y.title="" splitcharts="true" limititems="false" showlegend="false" lockyaxis="true" showlabels="true">
+          <legendcomposition>
+            <pielabelcomposition unit="true" value="true" />
+          </legendcomposition>
+          <chartsource systemid="WebSphere Commerce" sourcecolor="RGB(140,78,3,255)" dynamicconfig="true" fetchthreshold="false" scale="0" sessionid="WebSphere Commerce" parentid="d86d5aa7-ac12-466d-bd7a-18c892ba3e69" groupingcriterion="BTSP1" aggregationtype="Count" rate="10s" sourcetype="MEASURE" id="a2ed817f-f169-3362-98cc-004eb8c5b3d0" ratesupported="true" displayrate="10s" visible="false" autounit="false" sessiontype="live" fetch.dynamic.measures="true" autoscale="false" measuretype="TransactionMeasure" fetchbaseline="false" unit="ms" name="Exit Page of Visits - Load Time" groupingvalue="OrderPrepareCmdImpl" overridesource="true" fetchmeasurecolor="false" position="-1" uiunit="ms">
+            <tagtolabel>
+              <taglabelentry value="ClassName Page Class Performance" key="BTSP1" />
+            </tagtolabel>
+            <lightweightuniquemeasureidentifier systemid="WebSphere Commerce" application="" parentkeyid="Exit Page of Visits (Load Time;Page Actions;Total Time)" agentname="-" metricsimpledisplayname="Value" agenthost="-" metrickeyid="Value" keyid="Exit Page of Visits (Load Time;Page Actions;Total Time)" metricgroupkey="Business Transaction Results" collector="" measuretype="TransactionMeasure">
+              <tag type="0" value="OrderPrepareCmdImpl" key="BTSP1" />
+            </lightweightuniquemeasureidentifier>
+            <displaysourceinfo measureunit="ms" agentname="-" agenthost="-" agentgroup="&lt;all-agents&gt;" transactionname="Exit Page of Visits" measurerate="purepath" />
+          </chartsource>
+          <chartsource systemid="WebSphere Commerce" sourcecolor="RGB(140,78,3,255)" dynamicconfig="true" fetchthreshold="false" scale="0" sessionid="WebSphere Commerce" parentid="3dfc6caf-bb87-40bb-b64f-a2ac5dbb5954" groupingcriterion="BTSP1" aggregationtype="Count" rate="10s" sourcetype="MEASURE" id="aad6b44c-4a07-32d7-8174-047cc27a8f70" ratesupported="true" displayrate="10s" visible="false" autounit="false" sessiontype="live" fetch.dynamic.measures="true" autoscale="false" measuretype="TransactionMeasure" fetchbaseline="false" unit="ms" name="Exit Page of Visits - Load Time" groupingvalue="ProductDisplayCmdImpl" overridesource="true" fetchmeasurecolor="false" position="-1" uiunit="ms">
+            <tagtolabel>
+              <taglabelentry value="ClassName Page Class Performance" key="BTSP1" />
+            </tagtolabel>
+            <lightweightuniquemeasureidentifier systemid="WebSphere Commerce" application="" parentkeyid="Exit Page of Visits (Load Time;Page Actions;Total Time)" agentname="-" metricsimpledisplayname="Value" agenthost="-" metrickeyid="Value" keyid="Exit Page of Visits (Load Time;Page Actions;Total Time)" metricgroupkey="Business Transaction Results" collector="" measuretype="TransactionMeasure">
+              <tag type="0" value="ProductDisplayCmdImpl" key="BTSP1" />
+            </lightweightuniquemeasureidentifier>
+            <displaysourceinfo measureunit="ms" agentname="-" agenthost="-" agentgroup="&lt;all-agents&gt;" transactionname="Exit Page of Visits" measurerate="purepath" />
+          </chartsource>
+          <chartsource systemid="WebSphere Commerce" sourcecolor="RGB(140,78,3,255)" dynamicconfig="true" fetchthreshold="false" scale="0" sessionid="WebSphere Commerce" parentid="6d650e4c-8478-4f5f-a828-4d6544a788f9" groupingcriterion="BTSP1" aggregationtype="Count" rate="10s" sourcetype="MEASURE" id="b17b3ad1-f8ba-3f8f-8ca2-04df3cbf30ae" ratesupported="true" displayrate="10s" visible="false" autounit="false" sessiontype="live" fetch.dynamic.measures="true" autoscale="false" measuretype="TransactionMeasure" fetchbaseline="false" unit="ms" name="Exit Page of Visits - Load Time" groupingvalue="SearchDisplayCmdImpl" overridesource="true" fetchmeasurecolor="false" position="-1" uiunit="ms">
+            <tagtolabel>
+              <taglabelentry value="ClassName Page Class Performance" key="BTSP1" />
+            </tagtolabel>
+            <lightweightuniquemeasureidentifier systemid="WebSphere Commerce" application="" parentkeyid="Exit Page of Visits (Load Time;Page Actions;Total Time)" agentname="-" metricsimpledisplayname="Value" agenthost="-" metrickeyid="Value" keyid="Exit Page of Visits (Load Time;Page Actions;Total Time)" metricgroupkey="Business Transaction Results" collector="" measuretype="TransactionMeasure">
+              <tag type="0" value="SearchDisplayCmdImpl" key="BTSP1" />
+            </lightweightuniquemeasureidentifier>
+            <displaysourceinfo measureunit="ms" agentname="-" agenthost="-" agentgroup="&lt;all-agents&gt;" transactionname="Exit Page of Visits" measurerate="purepath" />
+          </chartsource>
+          <chartsource systemid="WebSphere Commerce" sourcecolor="RGB(140,78,3,255)" dynamicconfig="false" fetchthreshold="false" scale="0" sessionid="WebSphere Commerce" groupingcriterion="BTSP1" colorinheritancemode="random" aggregationtype="Count" rate="10s" sourcetype="MEASURE" id="b33fd975-c4f4-4b19-b93e-7bf78d8a30a0" ratesupported="true" displayrate="10s" visible="true" autounit="false" sessiontype="live" fetch.dynamic.measures="true" autoscale="false" measuretype="TransactionMeasure" fetchbaseline="false" unit="ms" name="Exit Page of Visits - Load Time" groupingvalue="OrderProcessCmdImpl" overridesource="true" fetchmeasurecolor="false" position="6" uiunit="ms">
+            <tagtolabel>
+              <taglabelentry value="ClassName Page Class Performance" key="BTSP1" />
+            </tagtolabel>
+            <lightweightuniquemeasureidentifier systemid="WebSphere Commerce" application="" parentkeyid="Exit Page of Visits (Load Time;Page Actions;Total Time)" agentname="" metricsimpledisplayname="Value" agenthost="" metrickeyid="Value" keyid="Exit Page of Visits (Load Time;Page Actions;Total Time)" metricgroupkey="Business Transaction Results" collector="" measuretype="TransactionMeasure" />
+            <displaysourceinfo measureunit="ms" agentname="" agenthost="" agentgroup="&lt;all-agents&gt;" transactionname="Exit Page of Visits" measurerate="purepath" />
+          </chartsource>
+          <chartsource systemid="WebSphere Commerce" sourcecolor="RGB(140,78,3,255)" dynamicconfig="false" fetchthreshold="false" scale="0" sessionid="WebSphere Commerce" groupingcriterion="BTSP1" colorinheritancemode="random" aggregationtype="Count" rate="10s" sourcetype="MEASURE" id="bc1dbcde-a193-4b6a-b8a1-0ec38aa2a0f2" ratesupported="true" displayrate="10s" visible="true" autounit="false" sessiontype="live" fetch.dynamic.measures="true" autoscale="false" measuretype="TransactionMeasure" fetchbaseline="false" unit="ms" name="Exit Page of Visits - Load Time" groupingvalue="CategoryDisplayCmdImpl" overridesource="true" fetchmeasurecolor="false" position="3" uiunit="ms">
+            <tagtolabel>
+              <taglabelentry value="ClassName Page Class Performance" key="BTSP1" />
+            </tagtolabel>
+            <lightweightuniquemeasureidentifier systemid="WebSphere Commerce" application="" parentkeyid="Exit Page of Visits (Load Time;Page Actions;Total Time)" agentname="" metricsimpledisplayname="Value" agenthost="" metrickeyid="Value" keyid="Exit Page of Visits (Load Time;Page Actions;Total Time)" metricgroupkey="Business Transaction Results" collector="" measuretype="TransactionMeasure" />
+            <displaysourceinfo measureunit="ms" agentname="" agenthost="" agentgroup="&lt;all-agents&gt;" transactionname="Exit Page of Visits" measurerate="purepath" />
+          </chartsource>
+          <chartsource systemid="WebSphere Commerce" sourcecolor="RGB(140,78,3,255)" dynamicconfig="false" fetchthreshold="false" scale="0" sessionid="WebSphere Commerce" groupingcriterion="BTSP1" colorinheritancemode="random" aggregationtype="Count" rate="10s" sourcetype="MEASURE" id="d86d5aa7-ac12-466d-bd7a-18c892ba3e69" ratesupported="true" displayrate="10s" visible="true" autounit="false" sessiontype="live" fetch.dynamic.measures="true" autoscale="false" measuretype="TransactionMeasure" fetchbaseline="false" unit="ms" name="Exit Page of Visits - Load Time" groupingvalue="OrderPrepareCmdImpl" overridesource="true" fetchmeasurecolor="false" position="5" uiunit="ms">
+            <tagtolabel>
+              <taglabelentry value="ClassName Page Class Performance" key="BTSP1" />
+            </tagtolabel>
+            <lightweightuniquemeasureidentifier systemid="WebSphere Commerce" application="" parentkeyid="Exit Page of Visits (Load Time;Page Actions;Total Time)" agentname="" metricsimpledisplayname="Value" agenthost="" metrickeyid="Value" keyid="Exit Page of Visits (Load Time;Page Actions;Total Time)" metricgroupkey="Business Transaction Results" collector="" measuretype="TransactionMeasure" />
+            <displaysourceinfo measureunit="ms" agentname="" agenthost="" agentgroup="&lt;all-agents&gt;" transactionname="Exit Page of Visits" measurerate="purepath" />
+          </chartsource>
+          <chartsource systemid="WebSphere Commerce" sourcecolor="RGB(140,78,3,255)" dynamicconfig="true" fetchthreshold="false" scale="0" sessionid="WebSphere Commerce" parentid="b33fd975-c4f4-4b19-b93e-7bf78d8a30a0" groupingcriterion="BTSP1" aggregationtype="Count" rate="10s" sourcetype="MEASURE" id="e3a3a5e9-a01c-3a8f-a4e8-e6e5fc5e844a" ratesupported="true" displayrate="10s" visible="false" autounit="false" sessiontype="live" fetch.dynamic.measures="true" autoscale="false" measuretype="TransactionMeasure" fetchbaseline="false" unit="ms" name="Exit Page of Visits - Load Time" groupingvalue="OrderProcessCmdImpl" overridesource="true" fetchmeasurecolor="false" position="-1" uiunit="ms">
+            <tagtolabel>
+              <taglabelentry value="ClassName Page Class Performance" key="BTSP1" />
+            </tagtolabel>
+            <lightweightuniquemeasureidentifier systemid="WebSphere Commerce" application="" parentkeyid="Exit Page of Visits (Load Time;Page Actions;Total Time)" agentname="-" metricsimpledisplayname="Value" agenthost="-" metrickeyid="Value" keyid="Exit Page of Visits (Load Time;Page Actions;Total Time)" metricgroupkey="Business Transaction Results" collector="" measuretype="TransactionMeasure">
+              <tag type="0" value="OrderProcessCmdImpl" key="BTSP1" />
+            </lightweightuniquemeasureidentifier>
+            <displaysourceinfo measureunit="ms" agentname="-" agenthost="-" agentgroup="&lt;all-agents&gt;" transactionname="Exit Page of Visits" measurerate="purepath" />
+          </chartsource>
+          <chartsource systemid="WebSphere Commerce" sourcecolor="RGB(140,78,3,255)" dynamicconfig="true" fetchthreshold="false" scale="0" sessionid="WebSphere Commerce" parentid="2d18a250-1680-4028-b5b9-87dd4c151330" groupingcriterion="BTSP1" aggregationtype="Count" rate="10s" sourcetype="MEASURE" id="fbe110ed-5dff-3707-9ca9-c8cac8fbc07a" ratesupported="true" displayrate="10s" visible="false" autounit="false" sessiontype="live" fetch.dynamic.measures="true" autoscale="false" measuretype="TransactionMeasure" fetchbaseline="false" unit="ms" name="Exit Page of Visits - Load Time" groupingvalue="LogonCmdImpl" overridesource="true" fetchmeasurecolor="false" position="-1" uiunit="ms">
+            <tagtolabel>
+              <taglabelentry value="ClassName Page Class Performance" key="BTSP1" />
+            </tagtolabel>
+            <lightweightuniquemeasureidentifier systemid="WebSphere Commerce" application="" parentkeyid="Exit Page of Visits (Load Time;Page Actions;Total Time)" agentname="-" metricsimpledisplayname="Value" agenthost="-" metrickeyid="Value" keyid="Exit Page of Visits (Load Time;Page Actions;Total Time)" metricgroupkey="Business Transaction Results" collector="" measuretype="TransactionMeasure">
+              <tag type="0" value="LogonCmdImpl" key="BTSP1" />
+            </lightweightuniquemeasureidentifier>
+            <displaysourceinfo measureunit="ms" agentname="-" agenthost="-" agentgroup="&lt;all-agents&gt;" transactionname="Exit Page of Visits" measurerate="purepath" />
+          </chartsource>
+          <chartsource systemid="WebSphere Commerce" sourcecolor="RGB(140,78,3,255)" dynamicconfig="true" fetchthreshold="false" scale="0" sessionid="WebSphere Commerce" parentid="bc1dbcde-a193-4b6a-b8a1-0ec38aa2a0f2" groupingcriterion="BTSP1" aggregationtype="Count" rate="10s" sourcetype="MEASURE" id="067a81da-8d27-39bf-8721-0ddc8b255221" ratesupported="true" displayrate="10s" visible="false" autounit="false" sessiontype="live" fetch.dynamic.measures="true" autoscale="false" measuretype="TransactionMeasure" fetchbaseline="false" unit="ms" name="Exit Page of Visits - Load Time" groupingvalue="CategoryDisplayCmdImpl" overridesource="true" fetchmeasurecolor="false" position="-1" uiunit="ms">
+            <tagtolabel>
+              <taglabelentry value="ClassName Page Class Performance" key="BTSP1" />
+            </tagtolabel>
+            <lightweightuniquemeasureidentifier systemid="WebSphere Commerce" application="" parentkeyid="Exit Page of Visits (Load Time;Page Actions;Total Time)" agentname="-" metricsimpledisplayname="Value" agenthost="-" metrickeyid="Value" keyid="Exit Page of Visits (Load Time;Page Actions;Total Time)" metricgroupkey="Business Transaction Results" collector="" measuretype="TransactionMeasure">
+              <tag type="0" value="CategoryDisplayCmdImpl" key="BTSP1" />
+            </lightweightuniquemeasureidentifier>
+            <displaysourceinfo measureunit="ms" agentname="-" agenthost="-" agentgroup="&lt;all-agents&gt;" transactionname="Exit Page of Visits" measurerate="purepath" />
+          </chartsource>
+          <chartsource systemid="WebSphere Commerce" sourcecolor="RGB(140,78,3,255)" dynamicconfig="false" fetchthreshold="false" scale="0" sessionid="WebSphere Commerce" groupingcriterion="BTSP1" colorinheritancemode="random" aggregationtype="Count" rate="10s" sourcetype="MEASURE" id="2d18a250-1680-4028-b5b9-87dd4c151330" ratesupported="true" displayrate="10s" visible="true" autounit="false" sessiontype="live" fetch.dynamic.measures="true" autoscale="false" measuretype="TransactionMeasure" fetchbaseline="false" unit="ms" name="Exit Page of Visits - Load Time" groupingvalue="LogonCmdImpl" overridesource="true" fetchmeasurecolor="false" position="1" uiunit="ms">
+            <tagtolabel>
+              <taglabelentry value="ClassName Page Class Performance" key="BTSP1" />
+            </tagtolabel>
+            <lightweightuniquemeasureidentifier systemid="WebSphere Commerce" application="" parentkeyid="Exit Page of Visits (Load Time;Page Actions;Total Time)" agentname="" metricsimpledisplayname="Value" agenthost="" metrickeyid="Value" keyid="Exit Page of Visits (Load Time;Page Actions;Total Time)" metricgroupkey="Business Transaction Results" collector="" measuretype="TransactionMeasure" />
+            <displaysourceinfo measureunit="ms" agentname="" agenthost="" agentgroup="&lt;all-agents&gt;" transactionname="Exit Page of Visits" measurerate="purepath" />
+          </chartsource>
+          <chartsource systemid="WebSphere Commerce" sourcecolor="RGB(140,78,3,255)" dynamicconfig="false" fetchthreshold="false" scale="0" sessionid="WebSphere Commerce" groupingcriterion="BTSP1" colorinheritancemode="random" aggregationtype="Count" rate="10s" sourcetype="MEASURE" id="3dfc6caf-bb87-40bb-b64f-a2ac5dbb5954" ratesupported="true" displayrate="10s" visible="true" autounit="false" sessiontype="live" fetch.dynamic.measures="true" autoscale="false" measuretype="TransactionMeasure" fetchbaseline="false" unit="ms" name="Exit Page of Visits - Load Time" groupingvalue="ProductDisplayCmdImpl" overridesource="true" fetchmeasurecolor="false" position="4" uiunit="ms">
+            <tagtolabel>
+              <taglabelentry value="ClassName Page Class Performance" key="BTSP1" />
+            </tagtolabel>
+            <lightweightuniquemeasureidentifier systemid="WebSphere Commerce" application="" parentkeyid="Exit Page of Visits (Load Time;Page Actions;Total Time)" agentname="" metricsimpledisplayname="Value" agenthost="" metrickeyid="Value" keyid="Exit Page of Visits (Load Time;Page Actions;Total Time)" metricgroupkey="Business Transaction Results" collector="" measuretype="TransactionMeasure" />
+            <displaysourceinfo measureunit="ms" agentname="" agenthost="" agentgroup="&lt;all-agents&gt;" transactionname="Exit Page of Visits" measurerate="purepath" />
+          </chartsource>
+          <chartsource systemid="WebSphere Commerce" sourcecolor="RGB(140,78,3,255)" dynamicconfig="false" fetchthreshold="false" scale="0" sessionid="WebSphere Commerce" groupingcriterion="BTSP1" colorinheritancemode="random" aggregationtype="Count" rate="10s" sourcetype="MEASURE" id="6d650e4c-8478-4f5f-a828-4d6544a788f9" ratesupported="true" displayrate="10s" visible="true" autounit="false" sessiontype="live" fetch.dynamic.measures="true" autoscale="false" measuretype="TransactionMeasure" fetchbaseline="false" unit="ms" name="Exit Page of Visits - Load Time" groupingvalue="SearchDisplayCmdImpl" overridesource="true" fetchmeasurecolor="false" position="2" uiunit="ms">
+            <tagtolabel>
+              <taglabelentry value="ClassName Page Class Performance" key="BTSP1" />
+            </tagtolabel>
+            <lightweightuniquemeasureidentifier systemid="WebSphere Commerce" application="" parentkeyid="Exit Page of Visits (Load Time;Page Actions;Total Time)" agentname="" metricsimpledisplayname="Value" agenthost="" metrickeyid="Value" keyid="Exit Page of Visits (Load Time;Page Actions;Total Time)" metricgroupkey="Business Transaction Results" collector="" measuretype="TransactionMeasure" />
+            <displaysourceinfo measureunit="ms" agentname="" agenthost="" agentgroup="&lt;all-agents&gt;" transactionname="Exit Page of Visits" measurerate="purepath" />
+          </chartsource>
+          <splitconfig splitlayout="Horizontal" splitmode="PerSeries" />
+        </chart>
+        <table structuremode="measureHierarchy" sortcolumn="16" drawcolumn="-1" columnorder="0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19">
+          <column forcevisible="false" hidden="false" width="812" index="0" sort="Down" />
+          <column forcevisible="false" hidden="true" width="100" index="1" sort="None" />
+          <column forcevisible="false" hidden="true" width="100" index="2" sort="None" />
+          <column forcevisible="false" hidden="false" width="25" index="3" sort="None" />
+          <column forcevisible="false" hidden="false" width="100" index="4" sort="None" />
+          <column forcevisible="false" hidden="true" width="100" index="5" sort="None" />
+          <column forcevisible="false" hidden="false" width="50" index="6" sort="None" />
+          <column forcevisible="false" hidden="true" width="75" index="7" sort="None" />
+          <column forcevisible="false" hidden="true" width="75" index="8" sort="None" />
+          <column forcevisible="false" hidden="true" width="75" index="9" sort="None" />
+          <column forcevisible="false" hidden="true" width="75" index="10" sort="None" />
+          <column forcevisible="true" hidden="false" width="75" index="11" sort="None" />
+          <column forcevisible="false" hidden="true" width="100" index="12" sort="None" />
+          <column forcevisible="false" hidden="false" width="105" index="13" sort="None" />
+          <column forcevisible="false" hidden="true" width="50" index="14" sort="None" />
+          <column forcevisible="false" hidden="true" width="50" index="15" sort="None" />
+          <column forcevisible="false" hidden="false" width="100" index="16" sort="Up" />
+          <column forcevisible="false" hidden="true" width="150" index="17" sort="None" />
+          <column forcevisible="false" hidden="true" width="150" index="18" sort="None" />
+          <column forcevisible="false" hidden="true" width="150" index="19" sort="None" />
+        </table>
+        <heatfieldconfig customevents="true" deploymentevents="true" smartmeasure="true" smartserver="true" filterconfirmed="false">
+          <incidentrules />
+        </heatfieldconfig>
+      </datamodelconfig>
+      <chartcolors />
+    </portletconfig>
+    <portletconfig usedashboardsourceforcompare="true" usespecificautorefresh="false" icon="com.dynatrace.diagnostics.sdk/default_16x16.png" description="" heightmode="AdjustToFontSize" locationascomparesource="false" source="server://dt2wscv8" usedashboardsource="true" com.dynatrace.diagnostics.portlets.text.textportletconfig.text="&#xD;&#xA;" folderid="org.eclipse.ui.internal.ViewStack@6b426202" com.dynatrace.diagnostics.portlets.text.textportletconfig.alignment="CENTER" locationassource="false" addfilterinfo="false" com.dynatrace.diagnostics.portlets.text.textportletconfig.wallpapercolor="RGB(181,176,204,255)" invertcolors="true" com.dynatrace.diagnostics.portlets.text.textportletconfig.backgroundstyle="center" name="Order Preparation" ismaster="false" com.dynatrace.diagnostics.portlets.text.textportletconfig.defaultforegroundcolor="RGB(0,0,0,255)" typeid="com.dynatrace.diagnostics.portlets.text.Text" id="5271a5dc-135e-4278-b8d6-36508e861a43">
+      <reportconfig print.images="true" lines.per.table="100" override="false" optimizeequalcolumns="true" print.legends="true" reportposition="4" enabled="true" levels.per.tree="10" />
+      <filter>
+        <inheritancemap />
+      </filter>
+      <autorefreshconfig unit="MINUTES" time="5" enabled="false" />
+      <sashconfig displayoption="CHART_AND_TABLE" weights="1,1" />
+      <font name="Arial" style="BOLD" height="2" />
+    </portletconfig>
+    <portletconfig usedashboardsourceforcompare="true" usespecificautorefresh="false" icon="com.dynatrace.diagnostics.sdk/default_16x16.png" description="" heightmode="AdjustToFontSize" locationascomparesource="false" source="server://dt2wscv8" usedashboardsource="true" com.dynatrace.diagnostics.portlets.text.textportletconfig.text="&#xD;&#xA;" folderid="org.eclipse.ui.internal.ViewStack@121465a" com.dynatrace.diagnostics.portlets.text.textportletconfig.alignment="CENTER" locationassource="false" addfilterinfo="false" com.dynatrace.diagnostics.portlets.text.textportletconfig.wallpapercolor="RGB(181,176,204,255)" invertcolors="true" com.dynatrace.diagnostics.portlets.text.textportletconfig.backgroundstyle="center" name="Login" ismaster="false" com.dynatrace.diagnostics.portlets.text.textportletconfig.defaultforegroundcolor="RGB(0,0,0,255)" typeid="com.dynatrace.diagnostics.portlets.text.Text" id="77c63c27-f69f-47ab-b627-3a37c875ac29">
+      <reportconfig print.images="true" lines.per.table="100" override="false" optimizeequalcolumns="true" print.legends="true" reportposition="4" enabled="true" levels.per.tree="10" />
+      <filter>
+        <inheritancemap />
+      </filter>
+      <autorefreshconfig unit="MINUTES" time="5" enabled="false" />
+      <sashconfig displayoption="CHART_AND_TABLE" weights="1,1" />
+      <font name="Arial" style="BOLD" height="2" />
+    </portletconfig>
+  </dashboardconfig>
+</dynatrace>
